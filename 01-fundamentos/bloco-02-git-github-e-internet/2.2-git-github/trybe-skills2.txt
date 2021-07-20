@@ -11,3 +11,5 @@ O que eu vou aprender na Trybe:
 - HTML
 - CSS
 - Redux
+- ruby
+- rail
