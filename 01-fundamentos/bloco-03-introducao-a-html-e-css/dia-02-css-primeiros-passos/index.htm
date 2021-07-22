@@ -5,8 +5,11 @@
     <title>HTML</title>
     <style>
       h1 {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 65px;
         color: rgb(210, 247, 3);
+        text-align: center;
+        text-decoration: underline;
       }
       ul {
         background-color: green;
@@ -14,6 +17,28 @@
       .bgc {
         background-color: rgb(7, 7, 247);
       }
+      p {
+        font-weight: 600;
+        font-size: 3em;
+      }
+      body {
+        font-size: 16px;
+      }
+    #amarelo {
+      background-color: yellow;
+      font-style: bold;
+      text-align: left;
+    }
+    #vermelho {
+      background-color: red;
+      font-style: italic;
+      text-align: center;
+    }
+    #marrom {
+      /* background-color: brown; */
+      font-style: initial;
+      text-align: right;
+    }
 
     </style>
   </head>
@@ -22,9 +47,9 @@
     <h1>Exercícios 3.2</h1>
     <p class="bgc">Qual é a sua cor favorita?</p>
     <ul class="bgc">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="amarelo">Amarelo</li>
+      <li id="vermelho">Vermelho</li>
+      <li id="marrom">Marrom</li>
     </ul>
   </body>
 </html>
