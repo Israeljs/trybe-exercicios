@@ -1,11 +1,46 @@
 ol li {
     background-color: yellow;
 }
-
 ol li:nth-of-type(even){
     color: chartreuse;
 }
-
 ol li:nth-of-type(odd){
     text-transform: uppercase;
+}
+.header {
+    color: crimson;
+}
+h1.header {
+    font-size: 40px;
+    border: solid black 1px;
+}
+li {
+    font-size: 20px;
+}
+li em {
+    font-weight: bold;
+}
+.text-blue {
+    color: blue;
+}
+li.bgc-pink {
+    background-color: pink;
+}
+a.hover:hover {
+    font-weight: bold;
+}
+a.stack:hover {
+    color: orange;
+}
+a.w3:hover {
+    color: green;
+}
+a.mdn:hover {
+    color: black;
+}
+a.dev:hover {
+    color: yellow;
+}
+a.trybe:hover {
+    color: turquoise;
 }
