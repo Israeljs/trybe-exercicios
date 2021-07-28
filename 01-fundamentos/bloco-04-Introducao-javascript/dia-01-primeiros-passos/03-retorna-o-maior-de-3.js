@@ -2,15 +2,15 @@
 // Defina no começo do programa três variáveis com os 
 // valores que serão comparados.
 
-let a = 5
+let a = 7
 let b = 6
-let c = 7
+let c = 0
 
 if (a > b && a > c) {
 
     console.log(a)
 
-} if (b > a && b > c) {
+} else if (b > a && b > c) {
 
     console.log(b)
 
