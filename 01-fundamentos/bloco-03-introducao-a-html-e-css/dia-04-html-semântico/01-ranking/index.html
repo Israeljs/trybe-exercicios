@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking</title>
     <style>
-      h1, h3 {
+      /* h1, h3 {
         text-align: center;
+      }
+
+      ul {
+          display: inline-block;
+          margin: auto; 
       }
 
       li.first {
           display: block;
           margin: auto;
       }
-      li.second, li.third {
-          display: inline-block;
-      }
-      ul li {
+      
+      .center {
           display: inline;
           text-align: center;
-          
       }
 
       .first {
@@ -36,6 +38,7 @@
         height: 50px;
         text-align: center;
         width: 300px;
+        margin-left: 25%;
       }
 
       .third {
@@ -44,8 +47,42 @@
         height: 50px;
         text-align: center;
         width: 300px;
-      }
+        margin-right: 25%;
+      } */
+      h1, section {
+    text-align: center;
+  }
 
+section ul li {
+    list-style: none;
+}
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    /* text-align: center; */
+    width: 200px;
+    margin: auto;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+  }
     </style>
   </head>
   <body>
@@ -53,7 +90,7 @@
       <h1>Hackathon Results</h1>
     </header>
     <section>
-      <ul>
+      <ul class="champions">
         <li class="first">1º - Equipe 1</li>
         <li class="second">2º - Equipe 2</li>
         <li class="third">3º - Equipe 3</li>
@@ -61,17 +98,17 @@
     </section>
     <section>
       <h3>Premiação Primeiro Lugar:</h3>
-      <ul>
+      <ul class="center">
         <li>| R$ 1000,00 por integrante da equipe |</li>
         <li>| Bootcamp de 2 meses com possibilidade de contratação |</li>
       </ul>
       <h3>Premiação Segundo Lugar:</h3>
-      <ul>
+      <ul class="center">
         <li>| R$ 600,00 por integrante da equipe |</li>
         <li>| Participação no processo seletivo para o Bootcamp |</li>
       </ul>
       <h3>Premiação Terceiro Lugar:</h3>
-      <ul>
+      <ul class="center">
         <li>| R$ 300,00 por integrante da equipe |</li>
         <li>| Participação no processo seletivo para o Bootcamp |</li>
       </ul>
