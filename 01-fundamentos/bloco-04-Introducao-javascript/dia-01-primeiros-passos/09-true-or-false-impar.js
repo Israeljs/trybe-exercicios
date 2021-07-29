@@ -1,15 +1,13 @@
-let a = 7
-let b = 5
-let c = 3
+let a = 3
+let b = 2
+let c = 4
 
-let d = a % 2 === 0
-let e = b % 2 === 0
-let f = c % 2 === 0
+let d = a % 2 === 1
+let e = b % 2 === 1
+let f = c % 2 === 1
 
 if (d === true || e === true || f === true) {
     console.log(true)
 } else {
     console.log(false)
 }
-
-
