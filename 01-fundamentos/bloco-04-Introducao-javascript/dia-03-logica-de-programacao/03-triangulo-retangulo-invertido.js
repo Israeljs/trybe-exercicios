@@ -15,11 +15,13 @@ if (n > 1) {
 
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substr
 
-// var aString = '   4';
+// var aString = '12345';
 
-// console.log(aString.substr(0, 4)); //  "   4"
+// console.log(aString.substr(2, 1)); //  "   4"
+// console.log(aString.substr(1, 3)); 
+// console.log(aString.substr(0, 5)); 
 
-// var aString = 'Mozilla';
+//var aString = 'Mozilla';
 // console.log(aString.substr(0, 1));   // 'M'
 // console.log(aString.substr(1, 0));   // ''
 // console.log(aString.substr(-1, 1));  // 'a'
