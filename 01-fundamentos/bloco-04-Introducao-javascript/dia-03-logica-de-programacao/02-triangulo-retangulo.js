@@ -1,4 +1,5 @@
 let n = 5;
+
 if (n > 1) {
     for (let index = 0; index < n; index++) {
         let texto = "";
