@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 class="page-title">Título</h2>
+      <p class="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      
+      const paragraph = document.getElementsByClassName("paragraph");
+      paragraph[0].innerText = "teste teste";
+
+      const subtitle = document.getElementsByTagName("h4");
+      subtitle[0].style.color = "green";
+
+    </script>
+  </body>
+</html>
