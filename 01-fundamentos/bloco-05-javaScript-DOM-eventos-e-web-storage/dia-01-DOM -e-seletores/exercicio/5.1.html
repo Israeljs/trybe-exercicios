@@ -43,29 +43,41 @@
     </main>
     <script>
 
-        let p = document.getElementsByTagName("p");
-        p[0].innerText = "No proso de dois anos estarei bem, já esterei trabalhando ou empreendendo";
-        p[1].innerText = "Vou estar programando, e serei um programador full stack";
-        p[2].innerText = "Talvez até mesmo ensinando programação!";
-
         let main = document.getElementsByClassName("main-content");
-        main[0].style.backgroundColor = "rgb(76,164,109)";
-        
         let center = document.getElementsByTagName("section");
-        center[0].style.backgroundColor = "white";
+
+        function paragrafo() {
+          let p = document.getElementsByTagName("p");
+          p[0].innerText = "No proso de dois anos estarei bem, já esterei trabalhando ou empreendendo";
+          p[1].innerText = "Vou estar programando, e serei um programador full stack";
+          p[2].innerText = "Talvez até mesmo ensinando programação!";
+        }
+        paragrafo();
+
+        function backGroundColor(elemento, cor) {
+          elemento[0].style.backgroundColor = cor;
+        }
+
+        backGroundColor(main, "rgb(76,164,109)");
+        backGroundColor(center, "white")
 
         let title = document.getElementsByClassName("title");
-        title[0].innerText = "Exercício 5.1 - JavaEscripit"
+        title[0].innerText = "Exercício 5.1 - JavaEscripites"
         
         let p2 = document.getElementsByTagName("p");
         for (let i = 0; i < p2.length; i++) {
         p2[i].style.textTransform = "upperCase";  
         }
+        
+        function imprimeParagrafo() {
+          let p3 = document.getElementsByTagName("p");
 
-        let p3 = document.getElementsByTagName("p");
-        for (let i = 0; i < p3.length; i++) {
-        console.log(p3[i]);       
+          for (let i = 0; i < p3.length; i++) { 
+            console.log(p3[i]); 
         }
+        }
+        
+        // console.log(imprimeParagrafo()); função deve ser chamada no browser
 
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
