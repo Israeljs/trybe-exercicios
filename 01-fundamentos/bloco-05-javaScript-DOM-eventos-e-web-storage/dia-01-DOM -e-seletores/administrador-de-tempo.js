@@ -14,14 +14,11 @@ for (let i = 0; i < noEmergency.length; i++) {
 };
 
 let urgente = document.querySelectorAll(".emergency-tasks div h3");
-for (let i = 0; i < urgente.length; i++) {
-    urgente[i].style.backgroundColor = "rgb(174, 119, 242)";
-};
+urgente[i].style.backgroundColor = "rgb(174, 119, 242)";
+
 
 let noUrgente = document.querySelectorAll(".no-emergency-tasks div h3");
-for (let i = 0; i < noUrgente.length; i++) {
-    noUrgente[i].style.backgroundColor = "rgb(35, 37, 37)";
-};
+noUrgente[i].style.backgroundColor = "rgb(35, 37, 37)";
 
 let footer = document.querySelector("#footer-container");
 footer.style.backgroundColor = "rgb(19, 54, 51)";
