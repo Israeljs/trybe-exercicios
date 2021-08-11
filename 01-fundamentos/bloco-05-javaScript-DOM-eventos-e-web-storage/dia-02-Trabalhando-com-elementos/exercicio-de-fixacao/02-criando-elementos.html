@@ -1,0 +1,39 @@
+<main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+    <script>
+        // // Crie um irmão para elementoOndeVoceEsta .
+        let pai = document.getElementById("pai");
+        let secao = document.createElement("p");
+        
+        secao.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id est quis nisi vulputate tempor at quis turpis. Duis dictum nibh diam, a tristique felis egestas eget. Quisque ullamcorper vehicula arcu, ut lacinia odio iaculis et. Pellentesque orci erat, posuere vel fermentum pulvinar, rutrum vel diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin vulputate mauris ac semper. Mauris sagittis sem in tincidunt venenatis. Suspendisse ultrices eros nec magna iaculis aliquam. Pellentesque at tortor et justo laoreet auctor. Vestibulum id ex velit. Nulla ac urna viverra erat accumsan maximus. Vivamus interdum imperdiet dolor at sollicitudin. Quisque efficitur scelerisque eros, id convallis enim iaculis et. Integer egestas dignissim neque ac accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris bibendum tempor dapibus.";
+        pai.appendChild(secao);
+
+        // Crie um filho para elementoOndeVoceEsta .
+        let elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+        let div = document.createElement("section");
+        elementoOndeVoceEsta.appendChild(div)
+
+        // Crie um filho para primeiroFilhoDoFilho .
+        let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
+        let dive = document.createElement("div");
+        primeiroFilhoDoFilho.appendChild(dive);
+
+        // A partir desse filho criado, acesse terceiroFilho .
+         let d = document.querySelectorAll("section div");
+
+         console.log(d[0].parentNode.parentNode.nextElementSibling)
+        
+
+    </script>
+  </main>
+
+
