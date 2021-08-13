@@ -10,7 +10,9 @@ function createDaysOfTheWeek() {
       weekDaysList.appendChild(dayListItem);
     };
   };
+  createDaysOfTheWeek();
 
+  // Exercício 1:
   function createDays() {
     const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
     const listaDias = document.querySelector('#days');
@@ -22,7 +24,7 @@ function createDaysOfTheWeek() {
         lis.classList.add('day');
         lis.innerText = element;
         listaDias.appendChild(lis);
-         console.log(lis);
+         //console.log(lis);
   
       if (element === 24 || element === 25 || element === 31) {
           lis.classList.add('holiday');
@@ -33,48 +35,41 @@ function createDaysOfTheWeek() {
  
     };
   };
+  createDays();
 
-  function feriados(feriados) {
-      const div = document.querySelector('.buttons-container');
+  // Exercício 2:
+  function buttonCreator(nome, elemento, id) {
+      const element = document.querySelector(elemento);
       const butao = document.createElement('button');
 
-      butao.innerText = feriados;
-      butao.id = "btn-holiday";
-      div.appendChild(butao);
+      butao.innerText = nome;
+      butao.id = id;
+      element.appendChild(butao);
   };
+ buttonCreator('Feriados', '.buttons-container', "btn-holiday");
   
+  // Exercício 3:
   let click = 0;
   function searchHollyday() {
     const holidays = document.querySelectorAll('.holiday');
     click += 1;
-    
+
     for (const value of holidays) {
       if (click % 2 === 1) {
-        value.style.color = "#666";
-      } else {
         value.style.color = "green";
+      } else {
+        value.style.color = "#666";
       }
     }
-    // for (let i = 0; i < holidays.length; i++) {
-    //   holidays[i].style.color = 'green';
-      
-    // }
-  };
-  
+  }
 
-  createDaysOfTheWeek();
-  createDays();
-  feriados('Feriados');
-  const bt = document.querySelector("#btn-holiday");
-  bt.addEventListener('click', searchHollyday);
+  function clickButton(elemento, funcao) {
+    const bt = document.querySelector(elemento);
+    bt.addEventListener('click', funcao);
+  }
 
-//   p {
-//     display: block;
-//     margin-block-start: 1em;
-//     margin-block-end: 1em;
-//     margin-inline-start: 0px;
-//     margin-inline-end: 0px;
-// }
-// div {
-//   display: block;
-// }
+  clickButton("#btn-holiday", searchHollyday);
+
+  // Exercício 4:
+  buttonCreator("Sexta-feira", '.buttons-container', "btn-friday");
+
