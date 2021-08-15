@@ -73,3 +73,30 @@ function createDaysOfTheWeek() {
   // Exercício 4:
   buttonCreator("Sexta-feira", '.buttons-container', "btn-friday");
 
+  // // Exercício 5:
+  function changeFriday() {
+    const fridays = document.querySelectorAll('.friday');
+    click += 1;
+    let sauva = [ 4, 11, 18, 25 ];
+    
+      for (let i = 0; i < fridays.length; i++) {
+
+      if (click % 2 === 1) {
+        fridays[i].innerText = "Sexta-feira";
+      } else {
+        fridays[i].innerText = sauva[i];
+      }
+      
+      }
+    // for (const value of fridays) {
+    //    sauva.push(value.innerText);
+    //   console.log(sauva)
+    //   if (click % 2 === 1) {
+    //     value.innerText = "Sexta-feira";
+    //   } else {
+    //     value.innerText = sauva;
+    //   }
+    // }
+  }
+
+  clickButton("#btn-friday", changeFriday);
