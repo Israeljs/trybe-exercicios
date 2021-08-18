@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Submissões - TrybeDev Mega Evento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="speaker-form-header box">
+    <h1>Submeter Palestra</h1>
+    <p>Quer palestrar na <em>TrybeDev Mega Evento</em>? Preencha o formulário!</p>
+  </header>
+
+  <form class="box" method="GET">
+    <!-- NOME -->
+    <div class="input-container">
+      <label for="full-name">Nome: </label>
+      <input type="text" name="full-name" id="full-name">
+    </div>
+    <!-- TEMA DA PALESTRA -->
+    <div class="input-container">
+      <label for="theme">Tema da Palestra: </label>
+      <input type="text" name="theme" id="theme">
+    </div>
+
+    <!-- TAMANHO DA CAMISA -->
+    <div class="input-container">
+      <fieldset>
+        <legend>Tamanho da Camisa</legend>
+
+        <input type="radio" name="t-shirt-size" id="t-shirt-size-P" value="P">
+        <label for="t-shirt-size-P">Pequeno</label>
+
+        <input type="radio" name="t-shirt-size" id="t-shirt-size-M" value="M">
+        <label for="t-shirt-size-M">Médio</label>
+
+        <input type="radio" name="t-shirt-size" id="t-shirt-size-G" value="G">
+        <label for="t-shirt-size-G">Grande</label>
+      </fieldset>
+    </div>
+    <!-- DESCRIÇÃO DA PALESTRA -->
+    <div class="input-container">
+      <label for="abstract">Descrição da Palestra</label>
+      <textarea name="abstract" id="abstract" rows="5"></textarea>
+    </div>
+
+    <!-- TIPO DE APRESENTAÇÃO -->
+    <div class="input-container">
+      <label for="talk-type">Tipo de Apresentação</label>
+      <select name="talk-type" id="talk-type">
+        <option value="lecture">Palestra</option>
+        <option value="workshop">Workshop</option>
+        <option value="other">Outro</option>
+      </select>
+    </div>
+
+    <!-- DISPONIBILIDADE -->
+    <div class="input-container">
+      <input type="checkbox" name="availability" id="availability">
+      <label for="availability">Eu confirmo que estarei disponível na data da apresentação</label>
+    </div>
+
+    <button type="submit">Submeter Palestra</button>
+  </form>
+</body>
+
+</html>
+
+<!-- 
+  full-name= &
+  theme= &
+  abstract= &
+  talk-type=lecture 
+-->
+
+<!-- 
+  full-name= &
+  theme= &
+  abstract= &
+  talk-type=lecture &
+  availability=on
+ -->
