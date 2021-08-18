@@ -49,16 +49,17 @@ function createDaysOfTheWeek() {
  buttonCreator('Feriados', '.buttons-container', "btn-holiday");
   
   // Exercício 3:
-  let click = 0;
+    let click = 0;
   function searchHollyday() {
     const holidays = document.querySelectorAll('.holiday');
-    click += 1;
+    // click += 1;
 
     for (const value of holidays) {
-      if (click % 2 === 1) {
-        value.style.color = "green";
+      // if (click % 2 === 1) {
+        if (value.style.backgroundColor === "green") {
+        value.style.backgroundColor = 'rgb(238,238,238)';
       } else {
-        value.style.color = "#666";
+        value.style.backgroundColor = "green";
       }
     }
   }
@@ -73,7 +74,7 @@ function createDaysOfTheWeek() {
   // Exercício 4:
   buttonCreator("Sexta-feira", '.buttons-container', "btn-friday");
 
-  // // Exercício 5:
+  // Exercício 5:
   function changeFriday() {
     const fridays = document.querySelectorAll('.friday');
     click += 1;
@@ -88,6 +89,31 @@ function createDaysOfTheWeek() {
       }
       
       }
+    }
+      clickButton("#btn-friday", changeFriday);
+
+      // GBARITO
+      // exercício 6
+      function dayMouseOver() {
+        let days = document.querySelector('#days');
+      
+        days.addEventListener('mouseover', function(event) {
+          event.target.style.fontSize = '30px';
+          event.target.style.fontWeight = '600';
+        })
+      };
+      
+      function dayMouseOut() {
+        let days = document.querySelector('#days');
+      
+        days.addEventListener('mouseout', function(event) {
+          event.target.style.fontWeight = '200';
+          event.target.style.fontSize = '20px';
+        })
+      };
+      
+      dayMouseOver();
+      dayMouseOut();
     // for (const value of fridays) {
     //    sauva.push(value.innerText);
     //   console.log(sauva)
@@ -97,6 +123,3 @@ function createDaysOfTheWeek() {
     //     value.innerText = sauva;
     //   }
     // }
-  }
-
-  clickButton("#btn-friday", changeFriday);
