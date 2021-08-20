@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>formulário de currículo</h1>
+    </header>
+    <form class="form" method="get">
+        <fieldset>
+            <div class="input-container">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" maxlength="40" required>
+            </div>
+            <div class="input-container">
+                <label for="">Email</label>
+                <input type="email" name="email" id="email" maxlength="50" required>
+            </div>
+            <div class="input-container">
+                <label for="">CPF</label>
+                <input type="text" name="cpf" id="cpf" maxlength="11" required>
+            </div>
+            <div class="input-container">
+                <label for="">Endereço</label>
+                <input type="text" name="endereco" id="endereco" maxlength="200" required>
+            </div>
+            <div class="input-container">
+                <label for="">Cidade</label>
+                <input type="text" name="cidade" id="cidade" maxlength="28" required>
+            </div>
+            <div class="input-container">
+                <label for="estado">Etado</label>
+                <select name="estado" id="estado" required></select>
+            </div>
+            <div>
+                <label for="casa">
+                    <input type="radio" name="moradia" id="casa">Casa
+                </label>
+                <label for="apartamentto">
+                    <input type="radio" name="moradia" id="apartamentto">Apartamento
+                </label>
+            </div>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
