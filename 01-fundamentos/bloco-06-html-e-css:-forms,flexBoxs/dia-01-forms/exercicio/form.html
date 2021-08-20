@@ -11,6 +11,7 @@
     </header>
     <form class="form" method="get">
         <fieldset>
+            <legend>Dados Pessoais</legend>
             <div class="input-container">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" maxlength="40" required>
@@ -44,6 +45,29 @@
                 </label>
             </div>
         </fieldset>
+        <fieldset>
+            <legend>Dados do seu último emprego</legend>
+            <div>
+                <label for="resumo">Resumo do currícu</label>
+                <textarea name="resumo" id="resumo" cols="50" rows="5" maxlength="100" required></textarea>
+            </div>
+            <div>
+                <label for="">Cargo</label>
+                <input type="text" name="cargo" id="cargo" maxlength="40" required>
+            </div>
+            <div>
+                <label for="">Descrição do cargo</label>
+                <input type="text" name="descricao-cargo" id="descricao-cargo" maxlength="5000" required>
+            </div>
+            <div>
+                <label for="data-inicio">Data de início</label>
+                <input type="text" name="data-inicio" id="data-inicio" maxlength="" placeholder="dd/mm/aaaa" required>
+            </div>
+        </fieldset>
+        <div>
+            <button class="submit-button" type="submit">Enviar</button>
+            <button class="clear-button" type="button">Limpar</button>
+        </div>
     </form>
     <script src="script.js"></script>
 </body>
