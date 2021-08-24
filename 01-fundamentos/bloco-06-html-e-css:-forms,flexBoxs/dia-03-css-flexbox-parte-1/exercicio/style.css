@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+.header {
+  display: flex;
+  background: rgb(50, 52, 51);
+  color: rgb(231, 233, 232);
+  justify-content: space-around;
+  align-items: center;
+  height: 65px;
+}
+
+.header-img {
+  width: 65px;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.sign-up {
+  font-size: 17px;
+  color: rgb(169, 169, 169);
+}
+
+.subtitle {
+  color: rgb(22, 41, 56);
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.box-container {
+  display: flex;
+  width: 567px;
+  height: 448px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  align-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 22px;
+}
+
+.box {
+  border-bottom: solid 2px rgb(172, 167, 167);
+  border-right: solid 2px rgb(172, 167, 167);
+  background: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  height: fit-content;
+  /* margin-top: 5px; */
+}
+
+div.box {
+  height: 215px;
+  width: 182px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+h4 {
+  color: rgb(95, 106, 124);
+}
+
+.social-img {
+  width: 25px;
+
+}
+
+.hr {
+  padding-top: 25px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  /* justify-content: center; */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+footer.footer div {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
