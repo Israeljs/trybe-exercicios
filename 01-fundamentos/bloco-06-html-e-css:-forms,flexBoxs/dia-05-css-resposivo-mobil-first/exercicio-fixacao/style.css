@@ -88,4 +88,11 @@ body {
       color: rgb(31, 29, 29);
       display: flex;
     }
+
+    @media (max-width: 500px) {
+      p.trick {
+        color: black;
+      }
+    }
+
   }
