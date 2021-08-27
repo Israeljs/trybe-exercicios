@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0
+    }
+
+    .menu {
+      background-color: #95c7ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .links {
+      display: flex;
+      /* border: 2px solid yellow; */
+    }
+
+    .links div {
+      margin: 10px;
+    }
+
+    /* .links,
+    .date {
+      border: 2px solid red;
+    } */
+
+    .images {
+      display: flex;
+      align-items: center;
+      height: 200px;
+      background-color: #cae3ff;
+      justify-content: space-evenly;
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* flex-flow: column wrap; */
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="menu">
+    <div class="date">Oct 16, 2021</div>
+
+    <div class="links">
+      <div>Sign Up</div>
+      <div>Login</div>
+    </div>
+  </nav>
+
+  <section class="images">
+    <button>Subscribe &#9662</button>
+    <img src="images/awesome-logo.svg" alt="Logo">
+    <img src="images/social-icons.svg" alt="Icones Sociais">
+  </section>
+
+  <section class="grid">
+    <img src="images/one.svg">
+    <img src="images/two.svg">
+    <img src="images/three.svg">
+    <img src="images/four.svg">
+    <img src="images/five.svg">
+  </section>
+</body>
+
+</html>

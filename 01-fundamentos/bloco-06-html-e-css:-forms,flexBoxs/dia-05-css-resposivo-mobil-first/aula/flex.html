@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS FLEXBOX - ORDER</title>
+  <style>
+    .container {
+      border: 2px solid black;
+      display: flex;
+      flex-direction: row;
+      height: 200px;
+      margin: auto;
+      align-items: flex-end;
+      width: 80%;
+    }
+
+    .box {
+      height: 50px;
+      flex-basis: 200px;
+    }
+
+    .one {
+      background-color: #FBD26A;
+      align-self: center;
+      order: 1;
+      flex-shrink: 3;
+    }
+
+    .two {
+      background-color: #FAA488;
+      order: 0;
+      flex-shrink: 3;
+      flex-grow: 1;
+    }
+
+    .three {
+      background-color: #9069EF;
+      order: -1;
+      flex-shrink: 1;
+      flex-grow: 2;
+    }
+
+    .four {
+      background-color: #006472;
+      order: 0;
+      flex-shrink: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box one"> 1 </div>
+    <div class="box two"> 2 </div>
+    <div class="box three"> 3 </div>
+    <div class="box four"> 4 </div>
+  </div>
+</body>
+
+</html>

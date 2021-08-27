@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+header a {
+  text-decoration: none;
+  opacity: 0.8;
+  padding: 0 10px;
+}
+
+header a:hover {
+  opacity: 1;
+}
+
+header a:visited, header a:hover, header a:active {
+  color: inherit;
+}
+
+header img {
+  width: 250px;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 15px;
+}
+
+.hero h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.hero .button {
+  background-color: #fff;
+  padding: 20px 50px;
+  color: #191c03;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.hero .button:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+.know-the-hotel {
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.know-the-hotel h3 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #191c03;
+}
+
+.know-the-hotel p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  color: #191c03;
+}
+
+.know-the-hotel hr {
+  width: 200px;
+  height: 2px;
+  margin-bottom: 70px;
+  border: none;
+  background-color: #191c03;
+}
+
+.know-the-hotel .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.know-the-hotel .grid img {
+  height: 350px;
+  width: 300px;
+  padding: 20px;
+  object-fit: cover;
+}
+
+.know-the-hotel .grid img.large {
+  flex-basis: 60%;
+}
+.know-the-hotel .grid img.small {
+  flex-basis: 40%;
+}
+
+.features {
+  padding: 100px 50px;
+  background-color: #191c03;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features h3 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  text-align: center;
+  color: white;
+}
+
+.features p {
+  max-width: 800px;
+  margin-bottom: 35px;
+  text-align: center;
+  color: white;
+}
+
+.features hr {
+  width: 200px;
+  height: 2px;
+  margin-bottom: 70px;
+  border: none;
+  background-color: white;
+}
+
+.features .grid {
+  display: flex;
+}
+
+.features .grid li {
+  padding: 0 30px;
+  text-align: center;
+  list-style: none;
+}
+
+.features .grid li i {
+  color: #c3c63b;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+
+.features .grid li h4 {
+  font-size: 1.5rem;
+  color: #c3c63b;
+  margin-bottom: 30px;
+}
