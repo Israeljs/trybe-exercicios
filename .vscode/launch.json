@@ -1,10 +1,6 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "pwa-node",
             "request": "launch",
@@ -13,6 +9,12 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}/01-fundamentos/bloco-07-ES6-e-Testes-Unitários/dia-01-let-const-arrow-functions-template-literals-ternary/exercicio/parte-2.js"
+        },
+        {
+            "type": "pwa-node",
+            "name": "Run Current File",
+            "request": "launch",
+            "program": "${workspaceFolder}/01-fundamentos/bloco-08-Higher-Order-Functions-do-JavaScript-ES6/dia-04-reduce/exercicio/exercicio4.js"
         }
     ]
 }

@@ -75,4 +75,12 @@ function averageAge() {
   return result;
 }
 
+// function averageAge() {
+//   const numberOfBooks = books.length;
+//   const sumOfAges = books.reduce((sum, book) => (
+//     sum + (book.releaseYear - book.author.birthYear)
+//   ), 0);
+//   return sumOfAges / numberOfBooks;
+// }
+
 assert.strictEqual(averageAge(), expectedResult);
