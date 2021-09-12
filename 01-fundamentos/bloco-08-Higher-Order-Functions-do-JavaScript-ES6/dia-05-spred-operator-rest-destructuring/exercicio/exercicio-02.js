@@ -4,7 +4,9 @@
 
 const assert = require('assert');
 
-const sum = () => 
+const sum = (...parameters) => parameters.reduce((acc, number) => acc + number, 0) ;
+
+console.log(sum(20,2,2,2,2,2,2,2,2,2))
 
 assert.strictEqual(sum(), 0);
 assert.strictEqual(sum(1), 1);
