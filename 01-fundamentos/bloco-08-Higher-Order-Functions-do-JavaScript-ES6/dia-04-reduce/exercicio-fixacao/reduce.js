@@ -65,4 +65,31 @@ const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
 function pares() {
   return numbers.reduce((acc, number) => ((number % 2 === 0) ? acc + number : acc), 0);
 }
-console.log(pares())
+console.log(pares());
+
+
+// MAP e REDUCE diferença 
+const adultos = [
+  {
+    peso: 100,
+    altura: 1.85
+  },
+  {
+    peso: 90,
+    altura: 1.72
+  },
+  {
+    peso: 79,
+    altura: 1.99
+  }
+]
+
+// IMC = Índice de Massa Corporal
+
+function IMC(adulto) {
+  return parseFloat((adulto.peso/(Math.pow(adulto.altura,2))).toFixed(2))
+}
+
+console.log(adultos.map(IMC)) // [ 29.22, 30.42, 19.95 ]
+console.log(adultos.reduce()) // NaN
+
