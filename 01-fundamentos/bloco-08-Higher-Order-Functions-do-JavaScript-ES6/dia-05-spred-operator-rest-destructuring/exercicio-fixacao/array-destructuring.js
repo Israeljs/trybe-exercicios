@@ -1,5 +1,7 @@
 const arrayCountries = ['Brazil', 'Japan', 'China', 'Canada'];
 const [firstCountry, secondCountry, thirdCountry, fourthCountry] = arrayCountries;
+// const p = [firstCountry, secondCountry, thirdCountry, fourthCountry] = arrayCountries;
+// console.log(p); // Brazil
 
 console.log(firstCountry); // Brazil
 console.log(secondCountry); // Japan
