@@ -25,3 +25,8 @@ function object(object, key, value) {
     return object;
 }
 console.log(object(casa, 'janela', 'madeira'))
+
+// Object.assign(object, { [dia[0]]: {
+//   officeHour: `Open from ${dia[1].open}am until ${dia[1].close}pm`,
+//   exhibition: (names),
+// } });
