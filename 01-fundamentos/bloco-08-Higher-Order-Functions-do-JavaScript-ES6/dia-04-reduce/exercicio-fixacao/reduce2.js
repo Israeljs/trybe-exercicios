@@ -99,3 +99,29 @@ const estudantes = [
   console.log(reportBetter(estudantes));
 
   assert.deepStrictEqual(reportBetter(estudantes), expectedResult);
+
+// exemplo fodástico
+  var vendedores = [
+    { nome:'Adão', vendas:32 },
+    { nome:'Bruno', vendas:23 },
+    { nome:'Claudio', vendas:16 },
+    { nome:'Dejair', vendas:7 },
+    { nome:'Eduardo', vendas:4 },
+    { nome:'Flavio', vendas:3 }
+];
+
+var totalVendas = vendedores.reduce(function(v, e) {
+    v[e.nome] = e.vendas;
+    return v;
+}, {});
+
+console.log(totalVendas);
+// retona:
+// {
+//   "Adão": 32,
+//   "Bruno": 23,
+//   "Claudio": 16,
+//   "Dejair": 7,
+//   "Eduardo": 4,
+//   "Flavio": 3
+// }
