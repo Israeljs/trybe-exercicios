@@ -12,8 +12,21 @@ The function is expected to return an INTEGER.
 The function accepts INTEGER x as parameter.
 */
 
+// function difference(x) {
+//   let diff = 0;
+//   if (x < 10) {
+//     diff = 10 - x;
+//   } else {
+//     diff = x - 10;
+//   }
+//   return diff;
+//   return Math.abs(x - 10); // sempre dará um número positivo
+// }
+
+// outra forma de fazer
 function difference(x) {
-};
+  return Math.abs(x - 10); // sempre dará um número positivo
+}
 
 // @TESTES
 function test_hackerrank() {
@@ -24,3 +37,5 @@ function test_hackerrank() {
   assert.deepEqual(difference(20),10);
   assert.deepEqual(difference(10),0);
 };
+
+test_hackerrank();

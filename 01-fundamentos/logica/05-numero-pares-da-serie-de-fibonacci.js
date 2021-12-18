@@ -41,6 +41,8 @@ function even_fibonacci_numbers(roof) {
   }, 0);
 };
 
+console.log(even_fibonacci_numbers(100))
+
 // @RafaelMGuimaraes
 // outra forma
 function even_fibonacci_numbers01(roof) {
@@ -65,3 +67,41 @@ function test_hackerrank(){
   // Teste fechado
   assert.deepEqual(even_fibonacci_numbers(3000000),1089154);
 };
+
+function even_fibonacci(roof) {
+  const series = [1, 2];
+  let result = [];
+
+  while (series[series.length - 1] < roof) {
+    let last = series.length - 1;
+    let sum = series[last] + series[last - 1];// ultima posição do array mais a penultima
+    if (sum > roof) {
+      break;
+    }
+    series.push(sum);
+  }
+
+  let serie = [series.reduce((acc, curr) => {
+    if (curr % 2 === 0) {
+      return acc + curr
+    }
+    return acc;
+  },0)]
+  return result = [...series, ...serie];
+}
+
+function even_fibonacci(roof) {
+  let first = 1;
+  let second = 2;
+  let sum = 0;
+
+  while (second < roof) {
+    if (second % 2 === 0) sum += second;
+    let temp = first;
+    first = second;
+    second = second + temp; 
+  }
+  return sum;
+}
+
+console.log(even_fibonacci(100))
