@@ -14,9 +14,30 @@ The function accepts INTEGER n as parameter.
 
 const { strict: assert } = require('assert');
 
+const isPrime = (n) => {
+// divide por todos os números antes de n;
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+    return true;
+  }
+}
+
+console.log(isPrime(7))
+
 function nth_prime(n) {
+  const primos = [];
+
+  for (let i = 2; primos.length < n; i++) {
+    if (isPrime(i)) {
+      primos.push(i);
+    }
+  }
+  return primos[n -1]
 };
 
+console.log(nth_prime(6))
 
 // @TESTES
 function test_hackerrank() {
@@ -25,3 +46,12 @@ function test_hackerrank() {
   // Teste fechado
   assert.deepEqual(nth_prime(1001),7927);
 };
+let text = "ABCDEFG"
+const myArr = Array.from(text);
+console.log(myArr)
+console.log(text.split(''))
+// [
+//   'A', 'B', 'C',
+//   'D', 'E', 'F',
+//   'G'
+// ]
