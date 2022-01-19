@@ -12,7 +12,13 @@ The function accepts INTEGER number as parameter.
 
 const { strict: assert } = require('assert');
 
-
+function isPrime(number) {
+  for (let i = 2; i < number; i++) {
+    if (i) {
+      
+    }
+  }
+}
 function largest_prime_factor(number) {
 
 };
@@ -24,3 +30,13 @@ function test_hackerrank() {
   // Teste fechado
   assert.deepEqual(largest_prime_factor(1460541),6857);
 }
+
+// const t = {
+//   column: 'population',
+//   comparison: 'maior que',
+//   value: 0,
+// }
+
+// const t2 = { ...t, column: 'ppppp'}
+
+// console.log(t2)
