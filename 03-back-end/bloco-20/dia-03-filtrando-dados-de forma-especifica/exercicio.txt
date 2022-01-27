@@ -15,6 +15,11 @@ limitadas (LTDA). Ordene os resultados em ordem alfabética decrescente.
 SELECT * FROM PecasFornecedores.Fornecedores
 WHERE name LIKE '%LTDA%' ORDER BY name DESC;
 
+5 - Escreva uma query para exibir o número de empresas (fornecedores) que contém a letra F no código.
+SELECT count(name) FROM PecasFornecedores.Fornecedores
+WHERE name LIKE '%F%';
+
+
 Banco do exercício
 
 DROP SCHEMA IF EXISTS PecasFornecedores;
