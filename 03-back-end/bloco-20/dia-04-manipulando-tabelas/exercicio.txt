@@ -5,6 +5,10 @@ INSERT INTO Movies(title, director, year, length_minutes)
      ('Os Incríveis', 'Brad Bird', 2004, 116),
      ('WALL-E', 'Pete Docter', 2008, 104);
 
+2 : Procurando foi classificado em 6.8, fez 450 milhões e 370 milhões. Altere a tabela BoxOffice .     
+INSERT INTO BoxOffice(movie_id, rating, domestic_sales, international_sales)
+  VALUES (9, 6.8, 45000000, 370000000);
+
 Banco do exercício:
 
 DROP SCHEMA IF EXISTS Pixar;
