@@ -10,6 +10,10 @@ WHERE Code LIKE 'a%' ORDER BY Name;
 SELECT Code, Name FROM Scientists.Projects
 WHERE Code LIKE '%3%' ORDER BY Name;
 
+4 - Exibir todos os cientistas (valores numéricos) cujos projetos sejam AeH3 , Ast3 ou Che1 .
+SELECT Scientist FROM Scientists.AssignedTo
+WHERE Project IN ('AeH3', 'Ast3', 'Che1');
+
 Banco do exrcício
 
 DROP SCHEMA IF EXISTS Scientists;
