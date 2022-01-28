@@ -6,6 +6,10 @@ WHERE Name LIKE '%e%';
 SELECT Name FROM Scientists.Projects
 WHERE Code LIKE 'a%' ORDER BY Name;
 
+3 - Exibir o código e nome de todos os projetos que possuam em seu código o número 3 . Ordene o resultado em ordem alfabética.
+SELECT Code, Name FROM Scientists.Projects
+WHERE Code LIKE '%3%' ORDER BY Name;
+
 Banco do exrcício
 
 DROP SCHEMA IF EXISTS Scientists;
