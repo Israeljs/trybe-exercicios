@@ -26,6 +26,12 @@ INSERT INTO BoxOffice(movie_id, rating, domestic_sales, international_sales)
          (10, 7.4, 460000000, 510000000),
          (11, 9.9, 290000000, 280000000);
 
+6 : Exclua da tabela Movies o filme "WALL-E"
+DELETE FROM BoxOffice
+WHERE movie_id = 11;       
+DELETE FROM Movies
+WHERE title = 'WALL-E';
+
 Banco do exercício:
 
 DROP SCHEMA IF EXISTS Pixar;
