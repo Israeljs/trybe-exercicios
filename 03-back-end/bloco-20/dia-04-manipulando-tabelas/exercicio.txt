@@ -9,6 +9,12 @@ INSERT INTO Movies(title, director, year, length_minutes)
 INSERT INTO BoxOffice(movie_id, rating, domestic_sales, international_sales)
   VALUES (9, 6.8, 45000000, 370000000);
 
+3 : O diretor do filme "Procurando Nemo" está incorreto, foi dirigido por Andrew Staton. Corrija com UPDATE 
+SET SQL_SAFE_UPDATES = 0;
+UPDATE Movies
+SET director = 'Andrew Staton'
+WHERE title = 'Procurando Nemo';
+
 Banco do exercício:
 
 DROP SCHEMA IF EXISTS Pixar;
