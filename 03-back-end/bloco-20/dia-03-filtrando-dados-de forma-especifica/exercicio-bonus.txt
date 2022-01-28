@@ -2,6 +2,10 @@
 SELECT * FROM Scientists.Scientists
 WHERE Name LIKE '%e%';
 
+2 - Exibir o nome de todos os projetos cujo o código inicie com a letra A . Ordene o resultado em ordem alfabética.
+SELECT Name FROM Scientists.Projects
+WHERE Code LIKE 'a%' ORDER BY Name;
+
 Banco do exrcício
 
 DROP SCHEMA IF EXISTS Scientists;
