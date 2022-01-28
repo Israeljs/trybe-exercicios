@@ -14,6 +14,10 @@ WHERE Code LIKE '%3%' ORDER BY Name;
 SELECT Scientist FROM Scientists.AssignedTo
 WHERE Project IN ('AeH3', 'Ast3', 'Che1');
 
+5 - Exibir todas as informações de todos os projetos com mais de 500 horas.
+SELECT * FROM Scientists.Projects
+WHERE Hours > 500;
+
 Banco do exrcício
 
 DROP SCHEMA IF EXISTS Scientists;
