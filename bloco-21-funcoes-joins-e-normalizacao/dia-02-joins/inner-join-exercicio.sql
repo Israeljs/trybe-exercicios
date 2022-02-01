@@ -13,3 +13,12 @@ ad.address AS Endereco
 FROM staff AS st
 INNER JOIN address AS ad
 ON st.address_id = ad.address_id;
+
+-- Exiba o id do ator, nome, id do filme e título do filme, usando as tabelas actor, film_actor e film . 
+SELECT act.actor_id AS 'id do autor', CONCAT(act.first_name, ' ', act.last_name)
+AS 'Nome do autor', fac.film_id AS 'id do film', f.title AS 'título do filme'
+FROM actor AS act
+INNER JOIN film_actor AS fac
+ON act.actor_id = fac.actor_id
+INNER JOIN film AS f
+ON fac.film_id = f.film_id;
