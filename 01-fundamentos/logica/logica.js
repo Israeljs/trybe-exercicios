@@ -86,26 +86,24 @@
 // }
 // console.log(nth_prime(6));
 
-function digits_sum() {
-    let arr = [];
-    for (let i = 0; i <= 100; i++) {
-      arr[i] = i;
-    }
+// function digits_sum() {
+//     let arr = [];
+//     for (let i = 0; i <= 50; i++) {
+//       arr[i] = i;
+//     }
   
-    for (let i = 0; i < arr.length; i++) {
-      const sum = arr[i]
-      .toString()
-      .split('')
-      .map(Number)
-      .reduce(function (a, b) {
-          return a + b;
-      }, 0);
-      arr[i] = sum;
+//     for (let i = 0; i < arr.length; i++) {
+//       const sum = arr[i]
+//       .toString()
+//       .split('')
+//       .map(Number)
+//       .reduce((a, b) => a + b, 0);
+//       arr[i] = sum;
       
-    }
-    return arr;
-  }
-  console.log(digits_sum())
+//     }
+//     return arr;
+//   }
+//   console.log(digits_sum())
   
   const f = () => {
     const arr = [2568];
@@ -113,9 +111,7 @@ function digits_sum() {
     .toString()
     .split('')
     .map(Number)
-    .reduce(function (a, b) {
-        return a + b;
-    }, 0);
+    .reduce((a, b) => a + b, 0);
     return sum
   }
   console.log(f());
