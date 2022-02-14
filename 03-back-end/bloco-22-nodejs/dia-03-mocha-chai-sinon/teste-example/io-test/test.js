@@ -19,12 +19,15 @@
 //     });
 //   });
 // });
-
+const fs = require('fs');
+const sinon = require('sinon');
 const { expect } = require('chai');
 
 const leArquivo = require('./leArquivo');
 
 const CONTEUDO_DO_ARQUIVO = 'VQV com TDD';
+
+sinon.stub(fs, 'readFileSync').returns(CONTEUDO_DO_ARQUIVO);
 
 describe('leArquivo', () => {
   describe('Quando o arquivo existe', () => {
