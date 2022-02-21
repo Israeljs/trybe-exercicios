@@ -8,6 +8,14 @@
   'Você está quase no último teste'; => Você está esauq no omitlú etset
   'A base do teto desaba'; => A base do teto abased
  */
-const spinWords = (string) => {};
+const spinWords = (string) => {
+  return string.split(' ').map((element) => {
+    if (element.length >= 5) {
+      return element.split('').reverse().join('');
+    }
+    return element;
+  }).join(' ');
+};
 
+console.log(spinWords('Olá queridos amigos'))
 module.exports = spinWords
