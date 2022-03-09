@@ -17,20 +17,45 @@ app.get('/employees', async (_req, res) => {
   };
 });
 
+app.get('/employees/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const employee = await Employee.findOne({
+        where: { id },
+        // include: [{ model: Address, as: 'addresses' }],
+        include: [{
+          model: Address, as: 'addresses', attributes: { exclude: ['number'] },
+        }],
+        attributes: { exclude: ['age'] },
+        // Dessa maneira, o campo number será excluído do retorno da requisição.
+      });
+
+    if (!employee)
+      return res.status(404).json({ message: 'Funcionário não encontrado' });
+
+    return res.status(200).json(employee);
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Algo deu errado' });
+  };
+});
+
+// Lazy Loading
+// Esse método consiste, basicamente, em não especificar uma propriedade 
+// includes no momento de realizar a query no banco. Dessa forma, cria-se 
+// a possibilidade de termos dois usos para o mesmo endpoint.
 // app.get('/employees/:id', async (req, res) => {
 //   try {
 //     const { id } = req.params;
-//     const employee = await Employee.findOne({
-//         where: { id },
-//         // include: [{ model: Address, as: 'addresses' }],
-//         include: [{
-//           model: Address, as: 'addresses', attributes: { exclude: ['number'] },
-//         }],
-//         // Dessa maneira, o campo number será excluído do retorno da requisição.
-//       });
+// const employee = await Employee.findOne({ where: { id } });
 
 //     if (!employee)
 //       return res.status(404).json({ message: 'Funcionário não encontrado' });
+
+//        if (req.query.includeAddresses === 'true') {
+//          const addresses = await Address.findAll({ where: { employeeId: id } });
+//          return res.status(200).json({ employee, addresses });
+//        }
 
 //     return res.status(200).json(employee);
 //   } catch (e) {
@@ -39,30 +64,6 @@ app.get('/employees', async (_req, res) => {
 //   };
 // });
 
-// Lazy Loading
-// Esse método consiste, basicamente, em não especificar uma propriedade 
-// includes no momento de realizar a query no banco. Dessa forma, cria-se 
-// a possibilidade de termos dois usos para o mesmo endpoint.
-app.get('/employees/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-const employee = await Employee.findOne({ where: { id } });
-
-    if (!employee)
-      return res.status(404).json({ message: 'Funcionário não encontrado' });
-
-       if (req.query.includeAddresses === 'true') {
-         const addresses = await Address.findAll({ where: { employeeId: id } });
-         return res.status(200).json({ employee, addresses });
-       }
-
-    return res.status(200).json(employee);
-  } catch (e) {
-    console.log(e.message);
-    res.status(500).json({ message: 'Algo deu errado' });
-  };
-});
-// http://localhost:3000/employees/1?includeAddresses=true
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Ouvindo na porta ${PORT}`));
 
