@@ -5,10 +5,10 @@ module.exports = {
     await queryInterface.createTable('UserBooks', {
       userId: {
         type: Sequelize.INTEGER,
-        field: 'user_id',
+        field: 'userId',
         references: {
           model: 'Users',
-          key: 'user_id',
+          key: 'userId',
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
@@ -16,10 +16,10 @@ module.exports = {
       },
       bookId: {
         type: Sequelize.INTEGER,
-        field: 'book_id',
+        field: 'bookId',
         references: {
           model: 'Books',
-          key: 'book_id',
+          key: 'bookId',
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',

@@ -31,6 +31,8 @@ const perssons = [
   { id: 12, name: 'Natiana', age: 34, },
 ];
 
+const { id: numero, ...oRestoDasIformacoes } = perssons[2];// Salvando o id na variável numero e todo o resto na oRestoDasIformacoes
+
 const update = () => {
   const perssonIndex = perssons.findIndex(({ id }) => id === 10);
   perssons[perssonIndex] = { ...perssons[perssonIndex], name: 'israel jerônimo', age: 41 };
@@ -39,3 +41,21 @@ const update = () => {
 }
 
 console.log(update());
+console.log(numero);
+console.log(oRestoDasIformacoes);
+
+
+const categoryBody = [1,2,10];
+const categoryDB = [1,2,3,4,5,6,7,8,9,10];
+
+// const isIqual = categoryBody.every((categoryId) => {
+//   const result = categoryDB.some((catDBid) => catDBid === categoryId)
+//   return result;
+// });
+
+const isIqual = categoryBody.every((categoryId) => {
+  const result = categoryDB.includes(categoryId);
+  return result;
+});
+
+console.log(isIqual);
