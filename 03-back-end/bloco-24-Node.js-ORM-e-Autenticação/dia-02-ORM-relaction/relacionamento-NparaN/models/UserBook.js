@@ -1,22 +1,24 @@
 // models/UserBook.js
-module.exports = (sequelize, _DataTypes) => {
-  const UserBook = sequelize.define('UserBook',
-    {},
-    { timestamps: false },
+module.exports = (sequelize, DataTypes) => {
+  const UserBook = sequelize.define('UserBook', {
+      bookId: DataTypes.INTEGER,
+      userId: DataTypes.INTEGER,
+    },
+    { timestamps: false, underscored: false },
   );
 
   UserBook.associate = (models) => {
     models.Book.belongsToMany(models.User, {
       as: 'users',
       through: UserBook,
-      foreignKey: 'book_id',
-      otherKey: 'user_id',
+      foreignKey: 'bookId',
+      otherKey: 'userId',
     });
     models.User.belongsToMany(models.Book, {
       as: 'books',
       through: UserBook,
-      foreignKey: 'user_id',
-      otherKey: 'book_id',
+      foreignKey: 'userId',
+      otherKey: 'bookId',
     });
   };
 
