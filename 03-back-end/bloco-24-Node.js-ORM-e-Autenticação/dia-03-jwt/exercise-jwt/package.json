@@ -1,10 +1,9 @@
 {
-  "name": "relacionamento-nparan",
+  "name": "exercise-jwt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "npx sequelize-cli db:create && npx sequelize-cli db:migrate $",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
