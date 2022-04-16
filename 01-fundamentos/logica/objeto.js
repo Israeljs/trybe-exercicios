@@ -59,3 +59,15 @@ const isIqual = categoryBody.every((categoryId) => {
 });
 
 console.log(isIqual);
+
+let obj = {cara: 'bob'}
+obj2 = obj // {cara: 'bob'}
+obj2.cara = 'mario'
+obj // {cara: 'mario'}
+// O original modificou porque a cópia ainda está referenciada ao original…
+// Mas se vc cria um objeto novo {}  e passa os valores de um outro objeto com o spread = {…obj}  a referencia some.
+const obj1 = {cara: 'bob'}
+obj2 = {...obj1} // {cara: 'bob'}
+obj2.cara = 'mario'
+obj1 // {cara: 'bob'}
+obj2 // {cara: 'mario'}
