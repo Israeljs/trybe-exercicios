@@ -20,9 +20,9 @@ const nullArr = []; // null
 //   return result;
 // };
 
-const uniqueSum = (arr) => {
+const uniqueSum = (arr) => { // array.indexOf(item, start)
   return arr.filter((element, index) => arr.indexOf(element) === index) // mostra a primeira posição onde o elemento foiencontrado
       .reduce((acc, curr) => acc + curr, null); // para arrays vazios o null já está setado no reduce
 };
 
-console.log(uniqueSum(nullArr))
+console.log(uniqueSum(secondArr))

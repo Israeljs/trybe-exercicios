@@ -10,6 +10,14 @@
 // []; => []
 
 
-const removeSmallest = (numbers) => {};
+const removeSmallest = (numbers) => {
+const smallestElement = Math.min(...numbers);
+const indexElement  = numbers.indexOf(smallestElement);
+const newNumbers = numbers.filter((_number, index) => {
+  index === indexElement;
+});
 
-module.exports = removeSmallest;
+return newNumbers;
+};
+
+console.log(removeSmallest([3, 2, 1, 2, 1, 3, 4, 5]));

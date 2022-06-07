@@ -24,7 +24,7 @@ const isPrime = (n) => {
   }
 }
 
-console.log(isPrime(7))
+console.log(isPrime(12))
 
 function nth_prime(n) {
   const primos = [];
