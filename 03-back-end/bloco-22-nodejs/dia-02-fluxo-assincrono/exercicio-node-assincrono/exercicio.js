@@ -8,7 +8,7 @@ function sum(n1, n2, n3) {
 
     if (result < 50) {
       return reject('Valor muito baixo');
-    }
+    } 
 
     resolve(result);
   });
