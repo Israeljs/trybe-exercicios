@@ -40,17 +40,17 @@ function nth_prime(n) {
 console.log(nth_prime(6))
 
 // @TESTES
-function test_hackerrank() {
-  // Teste público
-  assert.deepEqual(nth_prime(6),13);
-  // Teste fechado
-  assert.deepEqual(nth_prime(1001),7927);
-};
-let text = "ABCDEFG"
-const myArr = Array.from(text);
-console.log(myArr)
-console.log(text.split(''))
-// [
+// function test_hackerrank() {
+//   // Teste público
+//   assert.deepEqual(nth_prime(6),13);
+//   // Teste fechado
+//   assert.deepEqual(nth_prime(1001),7927);
+// };
+// let text = "ABCDEFG"
+// const myArr = Array.from(text);
+// console.log(myArr)
+// console.log(text.split(''))
+// // [
 //   'A', 'B', 'C',
 //   'D', 'E', 'F',
 //   'G'

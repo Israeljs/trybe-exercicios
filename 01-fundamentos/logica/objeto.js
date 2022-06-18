@@ -31,7 +31,7 @@ const perssons = [
   { id: 12, name: 'Natiana', age: 34, },
 ];
 
-const { id: numero, ...oRestoDasIformacoes } = perssons[2];// Salvando o id na variável numero e todo o resto na oRestoDasIformacoes
+// const { id: numero, ...oRestoDasIformacoes } = perssons[2];// Salvando o id na variável numero e todo o resto na oRestoDasIformacoes
 
 const update = () => {
   const perssonIndex = perssons.findIndex(({ id }) => id === 10);
@@ -41,7 +41,7 @@ const update = () => {
 }
 
 console.log(update());
-console.log(numero);
+console.log(perssons);
 console.log(oRestoDasIformacoes);
 
 

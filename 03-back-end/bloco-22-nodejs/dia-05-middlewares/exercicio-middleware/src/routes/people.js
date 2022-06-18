@@ -11,7 +11,7 @@ const router = express.Router();
 router.get('/', peopleControllers.getAll);
 router.get('/:id', peopleControllers.getById);
 //router.post('/', peopleValidator, peopleControllers.create);
-//router.put('/:id', peopleValidator, peopleControllers.update);
+router.patch('/:id', peopleControllers.update);
 //router.delete('/:id', peopleControllers.exclude);
 
 module.exports = router;

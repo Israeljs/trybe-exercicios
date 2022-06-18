@@ -21,5 +21,23 @@ module.exports = {
     } catch (e) {
       next(e);
     }
+  },
+
+  update: (req, res, next) => {
+    const { id } = req.params;
+    const { email, phone } = req.body;
+
+    try {
+      const person = peopleServices.getById(id);
+
+      if (!person) return res.status(404).json({ message: 'Product not found' });
+
+      const updatePerson = peopleServices.update(id, email, phone);
+      console.log(updatePerson);
+      return res.status(200).send(updatePerson);
+    } catch (e) {
+      next(e);
+    }
   }
+
 }
