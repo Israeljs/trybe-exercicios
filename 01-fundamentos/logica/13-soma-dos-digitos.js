@@ -10,13 +10,31 @@ The function is expected to return an INTEGER.
 The function accepts INTEGER number_s as parameter.
 */
 
-const { strict: assert } = require('assert');
+const {
+  strict: assert
+} = require('assert');
+
+const toEqual = (index, s) => {
+  const equal = index.toString().split('').map(Number)
+    .reduce((acc, element) => acc + element);
+
+  return equal ===  s;
+}
 
 function digits_sum(number_s) {
-    return number_s.toString().split('').map(Number).reduce((acc, number) => acc + number);
+  let count = 0;
+
+  for (let i = 1; i < 1000; i++) {
+    if (toEqual(i ,number_s)) {
+      count += 1;
+    } else {
+      count += 0;
+    }
+  }
+  return count;
 };
 
-console.log(digits_sum(456));
+console.log(digits_sum(12));
 
 // var somarDigitos = (numero) => {
 //     var soma = 0;
@@ -33,8 +51,8 @@ console.log(digits_sum(456));
 
 // @TESTES
 function test_hackerrank() {
-    // Teste público
-    assert.deepEqual(digits_sum(26),3);
-    // Teste fechado
-    assert.deepEqual(digits_sum(23),15);
+  // Teste público
+  assert.deepEqual(digits_sum(26), 3);
+  // Teste fechado
+  assert.deepEqual(digits_sum(23), 15);
 };
