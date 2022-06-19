@@ -13,7 +13,23 @@ The function accepts INTEGER number_s as parameter.
 const { strict: assert } = require('assert');
 
 function digits_sum(number_s) {
+    return number_s.toString().split('').map(Number).reduce((acc, number) => acc + number);
 };
+
+console.log(digits_sum(456));
+
+// var somarDigitos = (numero) => {
+//     var soma = 0;
+
+//     while (numero != 0) {
+//         soma   += numero % 10;
+//         numero  = parseInt(numero / 10); // <--- atenção
+//     }
+
+//     return soma;
+// }
+
+// console.log(somarDigitos(45)); 
 
 // @TESTES
 function test_hackerrank() {
