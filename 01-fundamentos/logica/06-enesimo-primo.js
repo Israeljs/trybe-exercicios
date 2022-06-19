@@ -37,7 +37,7 @@ function nth_prime(n) {
   return primos[n -1]
 };
 
-console.log(nth_prime(6))
+console.log(nth_prime(5))
 
 // @TESTES
 // function test_hackerrank() {
