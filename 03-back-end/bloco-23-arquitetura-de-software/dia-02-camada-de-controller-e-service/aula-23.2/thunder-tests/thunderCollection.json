@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "fa1a6d3e-740b-43e9-8458-535cc8230f2b",
+    "colName": "23-2",
+    "created": "2022-06-24T18:46:42.743Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "009f47d3-bd36-46c9-ae9a-0b6f98283da4",
+        "name": "movies",
+        "containerId": "",
+        "created": "2022-06-24T18:46:49.893Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "3bc236c0-0ea5-48e8-8d97-6f5e0580558c",
+        "name": "characters",
+        "containerId": "",
+        "created": "2022-06-24T18:46:53.469Z",
+        "sortNum": 20000
+      }
+    ]
+  }
+]
