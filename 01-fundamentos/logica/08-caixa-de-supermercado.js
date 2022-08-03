@@ -22,15 +22,28 @@ The function is expected to return an INTEGER.
 The function accepts INTEGER_ARRAY values as parameter.
 */
 
-const { strict: assert } = require('assert');
+const {
+    strict: assert
+} = require('assert');
 
 function caixa(values) {
+    const newArray = [];
+    values.forEach((element) => {
+        if (element === 0) {
+            newArray.pop();
+        } else {
+            newArray.push(element);
+        }
+    });
+    return newArray.reduce((acc, element) =>acc + element);
 };
 
-// @TESTES
-function test_hackerrank() {
-    // Teste público
-    assert.deepEqual(caixa([1, 3, 5, 4, 0, 0, 7, 0, 0, 6]),7);
-    // Teste fechado
-    assert.deepEqual(caixa([1, 3, 5, 8, 9, 3, 7, 7, 9, 6, 1, 3, 5, 0, 0, 0, 7, 0, 0, 6, 0, 3, 5, 4, 0, 0, 7, 0, 0, 6, 1, 3, 5, 0, 0, 0, 7, 0, 0, 6, 0, 3, 5, 4, 0, 0, 7, 0, 0, 6, 1, 3, 5, 4, 0, 0, 0, 0, 0, 6, 1, 3, 5, 4, 0, 0, 7, 0, 0, 6, 1, 3, 5, 4, 0, 0, 0, 0, 0, 6, 0, 3, 5, 0, 0, 0, 7, 0, 0, 6, 1, 0, 5, 4, 0, 0, 0, 0, 0, 6]),42);
-};
+console.log(caixa([1, 3, 5, 4, 0, 0, 7, 0, 0, 6]));
+
+// // @TESTES
+// function test_hackerrank() {
+//     // Teste público
+//     assert.deepEqual(caixa([1, 3, 5, 4, 0, 0, 7, 0, 0, 6]),7);
+//     // Teste fechado
+//     assert.deepEqual(caixa([1, 3, 5, 8, 9, 3, 7, 7, 9, 6, 1, 3, 5, 0, 0, 0, 7, 0, 0, 6, 0, 3, 5, 4, 0, 0, 7, 0, 0, 6, 1, 3, 5, 0, 0, 0, 7, 0, 0, 6, 0, 3, 5, 4, 0, 0, 7, 0, 0, 6, 1, 3, 5, 4, 0, 0, 0, 0, 0, 6, 1, 3, 5, 4, 0, 0, 7, 0, 0, 6, 1, 3, 5, 4, 0, 0, 0, 0, 0, 6, 0, 3, 5, 0, 0, 0, 7, 0, 0, 6, 1, 0, 5, 4, 0, 0, 0, 0, 0, 6]),42);
+// };

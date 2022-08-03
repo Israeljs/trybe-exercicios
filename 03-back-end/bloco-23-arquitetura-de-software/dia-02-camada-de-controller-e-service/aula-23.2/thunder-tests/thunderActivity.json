@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "10f01f37-a13a-4690-a53a-068c99ae6c14",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/movies",
+    "url": "localhost:3000/movies",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-24T21:51:45.708Z",
+    "modified": "2022-06-24T21:51:45.737Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
