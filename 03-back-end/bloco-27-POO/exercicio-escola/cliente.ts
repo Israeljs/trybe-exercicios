@@ -1,11 +1,11 @@
 export default class cliente {
-  _nome: string;
+  nome: string;
 
-  constructor() {
-    this._nome = '';
+  constructor(nome: string) {
+    this.nome = nome;
   }
 
-  public set nome(value: string) {
-    this._nome = value;
-  }
+  // public set nome(value: string) {
+  //   this._nome = value;
+  // }
 }

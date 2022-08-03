@@ -1,18 +1,18 @@
-export default class PedidoItem {
-  _nome: string;
+export default class ItemPedido {
+  nome: string;
 
-  _preco: number;
+  preco: number;
 
-  constructor() {
-    this._nome = '';
-    this._preco = 0;
+  constructor(nome: string, preco: number) {
+    this.nome = nome;
+    this.preco = preco;
   }
 
-  set nome(value: string) {
-    this._nome = value;
-  }
+  // set nome(value: string) {
+  //   this._nome = value;
+  // }
 
-  set preco(value: number) {
-    this._preco = value;
-  }
+  // set preco(value: number) {
+  //   this._preco = value;
+  // }
 }
