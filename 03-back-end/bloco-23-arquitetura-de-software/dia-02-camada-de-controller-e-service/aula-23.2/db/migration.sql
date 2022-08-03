@@ -1,5 +1,7 @@
 DROP DATABASE IF EXISTS `db`;
+
 CREATE DATABASE `db`;
+
 USE `db`;
 
 CREATE TABLE `movie` (
@@ -22,4 +24,11 @@ CREATE TABLE `movie_character` (
   `character_id` INT NOT NULL,
   FOREIGN KEY (`movie_id`) REFERENCES `movie` (`id`) ON DELETE CASCADE,
   FOREIGN KEY (`character_id`) REFERENCES `character` (`id`) ON DELETE CASCADE
+);
+
+CREATE TABLE `directors` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `created_at` DATETIME(3) NOT NULL DEFAULT NOW(3),
+  `updated_at` DATETIME(3) NULL ON UPDATE NOW(3)
 );

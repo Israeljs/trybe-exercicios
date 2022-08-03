@@ -2,7 +2,6 @@ const express = require('express');
 require('express-async-errors');
 const movieRoute = require('./routes/movieRoute');
 const characterRoute = require('./routes/characterRoute');
-const directorRoute = require('./routes/directorRoute');
 
 const APP_PORT = Number(process.env.APP_PORT || 3000);
 
@@ -11,7 +10,6 @@ app.use(express.json());
 
 app.use('/movies', movieRoute);
 app.use('/characters', characterRoute);
-app.use('/directors', directorRoute);
 
 app.use((err, _req, res, _next) => {
   const { name, message } = err;

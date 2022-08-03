@@ -1,14 +1,20 @@
 USE `db`;
 
-SET FOREIGN_KEY_CHECKS = 0;
+SET
+  FOREIGN_KEY_CHECKS = 0;
 
 TRUNCATE TABLE `movie`;
+
 TRUNCATE TABLE `character`;
+
 TRUNCATE TABLE `movie_character`;
 
-SET FOREIGN_KEY_CHECKS = 1;
+SET
+  FOREIGN_KEY_CHECKS = 1;
 
-INSERT INTO  `movie` (`id`, `name`) VALUES 
+INSERT INTO
+  `movie` (`id`, `name`)
+VALUES
   (1, 'Episode IV - A New Hope'),
   (2, 'Episode V - The Empire Strikes Back'),
   (3, 'Episode VI - Return of the Jedi'),
@@ -19,7 +25,9 @@ INSERT INTO  `movie` (`id`, `name`) VALUES
   (8, 'Episode VIII - The Last Jedi'),
   (9, 'Episode IX - The Rise of Skywalker');
 
-INSERT INTO `character` (`id`, `name`) VALUES
+INSERT INTO
+  `character` (`id`, `name`)
+VALUES
   (1, 'C-3PO'),
   (2, 'R2D2'),
   (3, 'Luke Skywalker'),

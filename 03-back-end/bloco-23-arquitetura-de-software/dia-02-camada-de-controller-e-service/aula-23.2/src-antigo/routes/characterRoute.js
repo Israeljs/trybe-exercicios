@@ -3,10 +3,10 @@ const characterController = require('../controllers/characterController');
 
 const characterRoute = Router();
 
-characterRoute.get('/', characterController.listCharacters);
-characterRoute.get('/:id', characterController.getCharacter);
-characterRoute.post('/', characterController.addCharacter);
-characterRoute.put('/:id', characterController.editCharacter);
 characterRoute.delete('/:id', characterController.removeCharacter);
+characterRoute.put('/:id', characterController.editCharacter);
+characterRoute.get('/:id', characterController.getCharacter);
+characterRoute.get('/', characterController.listCharacters);
+characterRoute.post('/', characterController.addCharacter);
 
 module.exports = characterRoute;
