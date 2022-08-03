@@ -1,11 +1,20 @@
-export default class cliente {
-  nome: string;
+// Client.ts
+export default class Client {
+  private _name = String();
 
-  constructor(nome: string) {
-    this.nome = nome;
+  constructor(name: string) {
+    this.name = name;
   }
 
-  // public set nome(value: string) {
-  //   this._nome = value;
-  // }
+  get name(): string {
+    return this._name;
+  }
+
+  set name(value: string) {
+    if (value.length < 3) {
+      throw new Error('O nome deve conter no mínimo 3 caracteres.');
+    }
+
+    this._name = value;
+  }
 }

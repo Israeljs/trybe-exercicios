@@ -1,49 +1,62 @@
-import Cliente from './cliente';
-import ItemPedido from './pedidoItem';
+// Order.ts
+import Client from './cliente';
+import OrderItem from './pedidoItem';
 
-enum FormPagamento {
-  Dinheiro = 'dinheiro',
-  Cartao = 'cartão',
-}
-
-enum Desconto {
-  Dez = 0.9,
-  Trinta = 0.7,
-}
-
-export default class Pedido {
-  _cliente: string;
-
-  _pedido: string;
-
-  _precoPedido: number;
-
-  _pagamento?: FormPagamento;
-
-  _desconto?: Desconto;
+export default class Order {
+  private _client: Client;
+  private _items: OrderItem[] = [];
+  private _paymentMethod: string;
+  private _discount = 0;
 
   constructor(
-    // cliente = new Cliente('israel'), 
-    Cliente: Cliente, 
-    // item = new ItemPedido('gol1.0', 60000),
-    ItemPedido: ItemPedido,
-    pagamento?: FormPagamento,
-    desconto?: Desconto
-    ) {
-    this._cliente = Cliente.nome;
-    this._pedido = ItemPedido.nome;
-    this._precoPedido = ItemPedido.preco;
-    this._pagamento = pagamento;
-    this._desconto = desconto;
+    client: Client, 
+    items: OrderItem[], 
+    paymentMethod: string, 
+    discount: number,
+  ) {
+    this._client = client;
+    this.items = items;
+    this._paymentMethod = paymentMethod;
+    this.discount = discount;
   }
 
-  public sumPedido(): number {
-    return this._precoPedido;
+  get client(): Client {
+    return this._client;
   }
 
-  public pedidoComDesc(): number {
-    if (!this._desconto) return this._precoPedido;
-    const precoDesc = this._precoPedido * this._desconto;
-    return precoDesc;
+  set client(value: Client) {
+    this._client = value;
+  }
+
+  get items(): OrderItem[] {
+    return this._items;
+  }
+
+  set items(value: OrderItem[]) {
+    if (value.length === 0) {
+      throw new Error('O pedido deve ter pelo meno um item.');
+    }
+
+    this._items = value;
+  }
+
+  get paymentMethod(): string {
+    return this._paymentMethod;
+  }
+
+  set paymentMethod(value: string) {
+    this._paymentMethod = value;
+  }
+
+  get discount(): number {
+    return this._discount;
+  }
+
+  set discount(value: number) {
+    if (value < 0) {
+      throw new Error('O desconto não pode ser um valor negativo.');
+    }
+
+    this._discount = value;
   }
 }

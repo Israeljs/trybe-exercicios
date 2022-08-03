@@ -1,18 +1,31 @@
-export default class ItemPedido {
-  nome: string;
+export default class OrderItem {
+  private _name: string;
+  private _price: number;
 
-  preco: number;
-
-  constructor(nome: string, preco: number) {
-    this.nome = nome;
-    this.preco = preco;
+  constructor(name: string, price: number) {
+    this._name = name;
+    this._price = price;
   }
 
-  // set nome(value: string) {
-  //   this._nome = value;
-  // }
+  get name(): string {
+    return this._name;
+  }
 
-  // set preco(value: number) {
-  //   this._preco = value;
-  // }
+  set name(value: string) {
+    if (value.length < 3) {
+      throw new Error('O nome deve conter no mínimo 3 caracteres.');
+    }
+
+    this._name = value;
+  }
+
+  get price(): number {
+    return this._price;
+  }
+
+  set price(value: number) {
+    if (value < 0) throw new Error('O preço deve ser positivo.');
+
+    this._price = value;
+  }
 }

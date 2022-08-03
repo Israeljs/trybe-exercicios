@@ -1,31 +1,79 @@
-export default class Estudante {
-  _matricula: string;
-  _nome: string;
-  _scoreP1: number;
-  _scoreP2: number;
-  _scoreP3: number;
-  _scoreP4: number;
-  _scoreT1: number;
-  _scoreT2: number;
-  
-  constructor(matricula: string, nome: string, scoreP1: number, scoreP2: number, scoreP3: number, scoreP4: number, scoreT1: number, scoreT2: number) {
-    this._matricula = matricula;
-    this._nome = nome;
-    this._scoreP1 = scoreP1;
-    this._scoreP2 = scoreP2;
-    this._scoreP3 = scoreP3;
-    this._scoreP4 = scoreP4;
-    this._scoreT1 = scoreT1;
-    this._scoreT2 = scoreT2;
+// Classe estudantes matriculadas em uma disciplina. Cada objeto dessa classe deve 
+// conter os seguintes dados: matrícula, nome, 4 notas de prova, 2 notas de trabalho.
+
+export default class Student {
+  private _enrollment: string;
+  private _name: string;
+  private _examsGrades: number[];
+  private _worksGrades: number[];
+
+  constructor(enrollment: string, name: string) {
+    this._enrollment = enrollment;
+    this._name = name;
+    this._examsGrades = [];
+    this._worksGrades = [];
   }
 
-  public scoreSum(): number {
-    const sum: number = this._scoreP1 + this._scoreP2 + this._scoreP3 + this._scoreP4 + this._scoreT1 + this._scoreT2;
-    return sum;
+  get enrollment(): string {
+    return this._enrollment;
   }
 
-  public scoreAverage(): number {
-    const averange: number = this.scoreSum() / 6;
-    return averange;
+  set enrollment(value: string) {
+    this._enrollment = value;
+  }
+
+  get name(): string {
+    return this._name;
+  }
+
+  set name(value: string) {
+    if (value.length < 3) {
+      throw new Error('O nome deve conter no mínimo 3 caracteres.');
+    }
+
+    this._name = value;
+  }
+
+  get examsGrades(): number[] {
+    return this._examsGrades;
+  }
+
+  set examsGrades(value: number[]) {
+    if (value.length > 4) {
+      throw new Error('A pessoa estudante só pode possuir 4 notas de provas.');
+    }
+
+    this._examsGrades = value;
+  }
+
+  get worksGrades(): number[] {
+    return this._worksGrades;
+  }
+
+  set worksGrades(value: number[]) {
+    if (value.length > 2) {
+      throw new Error(
+        'A pessoa estudante só pode possuir 2 notas de trabalhos.',
+      );
+    }
+
+    this._worksGrades = value;
+  }
+
+  sumGrades(): number {
+    return [...this.examsGrades, ...this.worksGrades]
+      .reduce((previousNote, note) => {
+        const nextNote = note + previousNote;
+
+        return nextNote;
+      }, 0);
+  }
+
+  sumAverageGrade(): number {
+    const sumGrades = this.sumGrades();
+    const divider = this.examsGrades.length + this.worksGrades.length;
+
+    return Math.round(sumGrades / divider);
   }
 }
+
