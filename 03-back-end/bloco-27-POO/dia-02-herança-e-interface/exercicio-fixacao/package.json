@@ -1,0 +1,20 @@
+{
+  "name": "exercicio-fixacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node index.ts",
+    "dev": "npx ts-node-dev index.ts"
+  },
+  "keywords": [],
+  "author": "israel jeronimo",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.6.3",
+    "ts-node-dev": "^1.1.8",
+    "tsc": "^2.0.4",
+    "typescript": "^4.7.4"
+  }
+}
