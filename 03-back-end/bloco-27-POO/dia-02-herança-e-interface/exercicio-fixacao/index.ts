@@ -48,3 +48,6 @@ const objSub = new Subclass()
 
 myFunc(objSuper)
 myFunc(objSub)
+// herança sempre que queremos especializar uma classe, ou seja, deixá-la
+// mais específica. Basta se perguntar se subclasse é um tipo de superclasse:
+// se a resposta for não, então não devemos utilizar herança.
