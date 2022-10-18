@@ -23,3 +23,9 @@ counter += 1
 a = [1, 2, 3]
 b = [1, 2, 3]
 # a == b # true
+
+# temperatura = 20
+# temperatura < 25 and temperatura > 18
+# 18 < temperatura < 25 # maneira mais pythonica
+#  idade <= 5 or idade >= 65
+
