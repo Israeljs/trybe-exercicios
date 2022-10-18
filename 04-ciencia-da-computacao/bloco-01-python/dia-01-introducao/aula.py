@@ -17,3 +17,9 @@ counter += 1
 # 3 // 2  # saída: 1 quociente.
 
 # 3 / 2  # saída: 1.5
+
+# '1' == 1 # false
+
+a = [1, 2, 3]
+b = [1, 2, 3]
+# a == b # true
