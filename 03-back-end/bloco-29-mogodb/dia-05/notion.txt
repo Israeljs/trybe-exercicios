@@ -1,0 +1,498 @@
+MongoDB - 5 link  https://marbled-vein-bbf.notion.site/MongoDB-5-af102bdc2229485f8029c94a8d246aab
+
+`mongoimport --db dataFlights --collection voos <caminho_do_arquivo>`
+
+`updateOne()`e `updateMany()`com mais "poderes":
+
+- operadores `$push`, `$pull`, `$pop` e `$addToSet`;
+- modificadores `$each`, `$slice` e `$sort`.
+
+```tsx
+use("school")
+
+db.students.insertOne({
+  _id: 1,
+  name: "Alex"
+});
+
+db.students.find({ _id: 1 }).pretty();
+
+```
+
+$push
+
+```tsx
+db.students.updateOne(
+  { _id: 1 },
+  {
+    $push: { scores: 89 }
+  }
+);
+
+db.students.updateOne(
+  { _id: 1 },
+  {
+    $push: { scores: 88 }
+  }
+);
+
+```
+
+O **modificador** `$each` recebe como parâmetro um *array* e adiciona **cada** elemento desse *array* no campo especificado
+
+```tsx
+db.students.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      scores: { $each: [90, 92, 85] }
+    }
+  }
+);
+
+db.students.find({ _id: 1 }).pretty();
+```
+
+Agora, vamos fazer mais alguns exemplos utilizando o banco de dados `dataFlights`
+
+```tsx
+use("dataFlights");
+
+db.voos.findOne(
+  {
+    "empresa.nome": "AMERICAN AIRLINES",
+    "aeroportoOrigem.sigla": "KJFK",
+    "aeroportoDestino.sigla": "SBGR"
+  },
+  {
+    vooId: 1,
+    "empresa.nome": 1,
+    "aeroportoOrigem.sigla": 1,
+    "aeroportoDestino.sigla": 1
+  }
+);
+```
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $push: {
+      servicoDeBordo: {
+        categoria: "bebida",
+        item: "coca-cola",
+        quantidade: 50
+      }
+    }
+  }
+);
+
+db.voos.findOne(
+  { vooId: 743218 },
+  { servicoDeBordo: 1 }
+);
+```
+
+```tsx
+db.voos.findOne(
+  { vooId: 743218 },
+  { "servicoDeBordo.item": 1 }
+);
+
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $push: {
+      servicoDeBordo:
+      {
+        $each: [
+          { categoria: "bebida", item: "guaraná", quantidade: 40 },
+          { categoria: "bebida", item: "vinho", quantidade: 35 },
+          { categoria: "bebida", item: "água", quantidade: 150 },
+          { categoria: "bebida", item: "leite", quantidade: 100 },
+          { categoria: "bebida", item: "café", quantidade: 200 },
+          { categoria: "comida", item: "macarrão", quantidade: 80 },
+          { categoria: "comida", item: "frango", quantidade: 60 }
+        ]
+      }
+    }
+  }
+);
+
+db.voos.findOne(
+  { vooId: 743218 },
+  { "servicoDeBordo.item": 1 }
+);
+```
+
+Combinação
+
+O modificador `$slice`, que limita o tamanho do *array* a uma determinada quantidade de elementos. Como queremos apenas os 3 testes de `Jennifer` com as maiores notas, passamos o valor `3` para `$slice`.
+
+```tsx
+db.students.updateOne(
+  { name: "Jennifer" },
+  {
+    $push: {
+      quizzes: {
+         $each: [
+           { wk: 5, score: 8 },
+           { wk: 6, score: 7 },
+           { wk: 7, score: 6 }
+        ],
+        $sort: { score: -1 },
+        $slice: 3
+      }
+    }
+  }
+);
+
+db.students.find({ name: "Jennifer" }).pretty();
+```
+
+Combinação
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $push: {
+      servicoDeBordo: {
+        $each: [
+          { categoria: "comida", item: "carne", quantidade: 180 },
+          { categoria: "bebida", item: "sprite", quantidade: 5 }
+        ],
+        $sort: { categoria: 1, item: 1 }
+      }
+    }
+  },
+  { collation: { locale: "pt" } }
+);
+
+db.voos.findOne(
+  { vooId: 743218 },
+  {
+    "servicoDeBordo.categoria": 1,
+    "servicoDeBordo.item": 1
+  }
+);
+```
+
+$pull
+
+```tsx
+use("superMarketBrand");
+
+db.stores.insertMany(
+  [
+    {
+      _id: 1,
+      fruits: ["apples", "pears", "oranges", "grapes", "bananas"],
+      vegetables: ["carrots", "celery", "squash", "carrots"]
+    },
+    {
+      _id: 2,
+      fruits: ["plums", "kiwis", "oranges", "bananas", "apples"],
+      vegetables: ["broccoli", "zucchini", "carrots", "onions"]
+    }
+  ]
+);
+
+db.stores.find().pretty();
+
+______
+
+db.stores.updateMany(
+  {},
+  {
+    $pull: {
+      fruits: { $in: ["apples", "oranges"] },
+      vegetables: "carrots"
+    }
+  }
+);
+
+db.stores.find().pretty();
+
+```
+
+****$pull****
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $pull: {
+      servicoDeBordo: { categoria: "comida",  item: "carne", quantidade: 180 }
+    }
+  }
+);
+
+db.voos.findOne({ vooId: 743218 });
+
+_______
+
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $pull: {
+      servicoDeBordo: { item: "macarrão" }
+    }
+  }
+);
+```
+
+****$pull  com o operador $in****
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $pull: {
+      servicoDeBordo: { item: { $in: ["vinho", "leite"] } }
+    }
+  }
+);
+
+db.voos.findOne({ vooId: 743218 });
+```
+
+Remover do cardápio com condição do operador $lte
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $pull: {
+      servicoDeBordo: {
+        categoria: "bebida",
+        quantidade: { $lte: 60 }
+      }
+    }
+  }
+);
+
+db.voos.findOne({ vooId: 743218 });
+```
+
+****$pop****
+
+O operador `$pop` oferece uma maneira simples de remover o **primeiro**
+ **ou** o **último** elemento de um *array. -1 o primeiro e 1 o último*
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $pop: { servicoDeBordo: -1 }
+  }
+);
+
+db.voos.findOne(
+  { vooId: 743218 },
+  {
+    servicoDeBordo: 1
+  }
+);
+
+___________
+
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $pop: { servicoDeBordo: 1 }
+  }
+);
+```
+
+****Operador $addToSet****
+
+O operador `$addToSet`
+ é a maneira mais simples de garantir que os elementos de um *array*
+ sejam únicos, ou seja, não tenham valores duplicados.
+
+```tsx
+use("myWalMart");
+
+db.inventory.insertOne({
+  _id: 1,
+  product: "polarizing_filter",
+  tags: ["electronics", "camera"]
+});
+
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "accessories" } }
+);
+
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "camera"  } }
+);
+
+db.inventory.findOne();
+
+```
+
+Vários de uma vez com $addToSet
+
+```tsx
+db.inventory.updateOne(
+  { _id: 1 },
+  {
+    $addToSet: {
+      tags: {
+          $each: ["camera", "accessories", "camera", "photography"]
+      }
+    }
+  }
+);
+
+db.inventory.find({ _id: 1 }).pretty();
+```
+
+Let’s go to the Flights
+
+```tsx
+use("dataFlights");
+
+db.voos.findOne(
+  { vooId: 743218 },
+  {
+    servicoDeBordo: 1
+  }
+);
+```
+
+Vamos tentar adicionar mais dois itens:
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743218 },
+  {
+    $addToSet: {
+      servicoDeBordo: {
+        $each: [
+          {
+            categoria: "bebida",
+            item: "água",
+            quantidade: 150
+          },
+          {
+            categoria: "comida",
+            item: "macarrão",
+            quantidade: 80
+          }
+        ]
+      }
+    }
+  }
+);
+
+db.voos.findOne(
+  { vooId: 743218 },
+  {
+    servicoDeBordo: 1
+  }
+);
+```
+
+updateMany()
+
+```tsx
+db.voos.updateMany(
+  {
+    "empresa.nome": "AMERICAN AIRLINES",
+    "aeroportoOrigem.sigla": "KJFK",
+    "aeroportoDestino.sigla": "SBGR"
+  },
+  {
+    $addToSet: {
+      servicoDeBordo : {
+        $each: [
+          {
+            categoria: "bebida",
+            item: "coca-cola",
+            quantidade: 50
+          },
+          {
+            categoria: "bebida",
+            item: "leite",
+            quantidade: 100
+          },
+          {
+            categoria: "bebida",
+            item: "água",
+            quantidade: 150
+          },
+          {
+            categoria: "comida",
+            item: "carne",
+            quantidade: 180
+          },
+          {
+            categoria: "comida",
+            item: "frango",
+            quantidade: 60
+          },
+          {
+            categoria: "comida",
+            item: "macarrão",
+            quantidade: 80
+          }
+        ]
+      }
+    }
+  }
+);
+```
+
+updateOne() e arrayFilters
+
+```tsx
+db.voos.updateOne(
+  { vooId: 743217 },
+  {
+    $set: {
+      "servicoDeBordo.$[elemento].quantidade": 200
+    }
+  },
+  {
+    arrayFilters: [{ "elemento.item": "coca-cola" }]
+  }
+);
+
+db.voos.findOne(
+  { vooId: 743217 },
+  {
+    vooId: 1,
+    servicoDeBordo: 1
+  }
+);
+```
+
+updateOne(), arrayFilter e or lógico
+
+```tsx
+db.voos.updateOne(
+    { vooId: 743218 },
+    {
+        $set: {
+            "servicoDeBordo.$[elemento].quantidade": 300
+        }
+    },
+    {
+        arrayFilters: [
+          { $or: [{ "elemento.item": "leite" }, { "elemento.item": "água" }] }
+        ]
+    }
+);
+
+db.voos.findOne(
+    { vooId: 743218 },
+    {
+        vooId: 1,
+        servicoDeBordo: 1
+    }
+);
+```

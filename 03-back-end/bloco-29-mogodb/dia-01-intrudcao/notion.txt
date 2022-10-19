@@ -1,0 +1,196 @@
+MongoDB - 1 link https://marbled-vein-bbf.notion.site/MongoDB-1-9e568ac0bbf1470d9ec869cc3e7c1d37
+
+*Comandos github: Pull request, Merge, issues, gists..*
+
+**Documentação:** [https://www.mongodb.com/docs/](https://www.mongodb.com/docs/)
+
+****db.collection.****i**nsertOne() e db.collection.InsertMany()**
+
+```tsx
+mongosh
+show dbs
+show collections
+
+use class;
+	db.inventory.insertOne({ item: "journal", qty: 25, size: { h: 14, w: 21, uom: "cm" }, status: "A" })
+	
+db.inventory.insertMany([
+  { item: "paper", qty: 100, size: { h: 8.5, w: 11, uom: "in" }, status: "D" },
+  { item: "planner", qty: 75, size: { h: 22.85, w: 30, uom: "cm" }, status: "D" },
+  { item: "postcard", qty: 45, size: { h: 10, w: 15.25, uom: "cm" }, status: "A" }])
+
+```
+
+****db.collection.find() e limit()****
+
+db.collection.find(query, projection)
+
+[https://www.mongodb.com/docs/manual/reference/method/db.collection.find/](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/)
+
+```tsx
+db.inventory.find({}); // ou
+db.inventory.find();
+
+db.inventory.find({ status: "D" });
+db.inventory.find({ status: "D", item: "paper" });
+
+db.inventory.find().limit(2);
+```
+
+****db.collection.find(),skip () e limit()****
+
+```tsx
+db.inventory.find({}, { item: 1 }); // retorna todos os documentos
+db.inventory.find({}, { item: 1 }).skip(0).limit(2); // retorna o primeiro e segundo documentos
+db.inventory.find({}, { item: 1 }).skip(2).limit(2); // retorna o terceiro e quarto documentos
+db.inventory.find({}, { item: 1 }).skip(3).limit(5); // retorna o quarto e quinto
+```
+
+****Sub-documentos e Relacionamentos****
+
+1:1
+
+```tsx
+// documento do usuário
+{
+  _id: "joe",
+  name: "Joe Bookreader"
+}
+
+// documento do endereço
+{
+  user_id: "joe", // referencia o documento do usuário
+  street: "123 Fake Street",
+  city: "Faketon",
+  state: "MA",
+  zip: "12345"
+}
+
+________________Documento
+
+{
+  _id: "joe",
+  name: "Joe Bookreader",
+  address: {
+    street: "123 Fake Street",
+    city: "Faketon",
+    state: "MA",
+    zip: "12345"
+  }
+}
+
+________________Inserção no Mongo
+
+db.users.insertOne({
+  _id: "joe",
+  name: "Joe Bookreader",
+  address: {
+    street: "123 Fake Street",
+    city: "Faketon",
+    state: "MA",
+    zip: "12345"
+  }
+});
+
+______________Find
+
+db.users.find({ _id: "joe" }).pretty();
+```
+
+**1:N**
+
+```tsx
+// documento da usuária
+{
+  _id: "amanda",
+  name: "Amanda Granger"
+}
+
+// documento do endereço
+{
+  user_id: "amanda", // referencia o documento da usuária
+  street: "Sunset Boulevard",
+  city: "Los Angeles",
+  state: "CA",
+  zip: "12345"
+}
+
+{
+  user_id: "amanda",
+  street: "1 Some Other Street",
+  city: "New York",
+  state: "NY",
+  zip: "12345"
+}
+
+_____________Array de documentos
+
+{
+  _id: "amanda",
+  name: "Amanda Granger",
+  addresses: [
+    {
+      street: "Sunset Boulevard",
+      city: "Los Angeles",
+      state: "CA",
+      zip: "12345"
+    },
+    {
+      street: "1 Some Other Street",
+      city: "New York",
+      state: "NY",
+      zip: "12345"
+    }
+  ]
+ }
+
+______________Inserção MongoDB
+
+db.users.insertOne({
+  _id: "amanda",
+  name: "Amanda Granger",
+  addresses: [
+    {
+      street: "Sunset Boulevard",
+      city: "Los Angeles",
+      state: "CA",
+      zip: "12345"
+    },
+    {
+      street: "1 Some Other Street",
+      city: "New York",
+      state: "NY",
+      zip: "12345"
+    }
+  ]
+ }
+);
+
+____________Find
+
+db.users.find({ _id: "amanda" }).pretty();
+```
+
+**Dados em subdocumentos**
+
+```tsx
+db.users.find({ "addresses.state": "NY" }).pretty();
+```
+
+****Projetando somente os campos requeridos****
+
+```tsx
+db.inventory.find({ status: "A" }, { item: 1, status: 1 }
+db.inventory.find({ status: "A" }, { item: true, status: true });
+
+db.inventory.find({ status: "A" }, { item: 1, status: 1, _id: 0 });
+db.inventory.find({ status: "A" }, { item: 1, status: 1, _id: false });
+
+db.inventory.find({ status: "A" }, { status: 0, instock: 0 });
+```
+
+MongoDB e Typescript
+
+[https://www.mongodb.com/compatibility/using-typescript-with-mongodb-tutorial](https://www.mongodb.com/compatibility/using-typescript-with-mongodb-tutorial)
+
+AWS DynamoDB

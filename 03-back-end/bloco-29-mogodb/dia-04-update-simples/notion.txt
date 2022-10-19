@@ -1,0 +1,371 @@
+MongoDB - 4 link https://marbled-vein-bbf.notion.site/MongoDB-4-8c491aea66f24bc7bb5364febb5314f1
+
+- Vamos passar pelos métodos `updateOne()`e `updateMany()`
+- dentro deles veremos os operadores:
+
+`$set`
+`$mul`
+`$inc`
+`$min`
+`$max`
+`$currentDate`
+`$rename`
+`$unset`
+
+```tsx
+use("school")
+
+db.students.insertMany(
+  [
+    { name: "Estudante 1", school: "Escola do Futuro", bestScore: 9.8 },
+    { name: "Estudante 2", school: "Escola do Futuro", bestScore: 7.2 }
+  ]
+);
+
+db.students.find().pretty();
+
+```
+
+updateOne
+
+```tsx
+db.students.updateOne(
+  { school: "Escola do Futuro" },
+  {
+    $set: {
+      school: "Trybe"
+    }
+  }
+);
+
+db.students.find().pretty();
+```
+
+updateOne
+
+```tsx
+db.students.updateOne(
+  { school: "Trybe" },
+  {
+    $set: {
+      school: "Escola do Futuro"
+    }
+  }
+);
+
+db.students.find().pretty();
+```
+
+updateMany
+
+```tsx
+db.students.updateMany(
+  { school: "Escola do Futuro" },
+  {
+    $set: {
+      school: "Trybe"
+    }
+  }
+);
+
+db.students.find().pretty();
+```
+
+upsert Quando essa opção é utilizada e nenhum documento atender os critérios de filtro, a operação **criará um novo documento** e fará o insert dele
+
+```tsx
+db.students.updateOne(
+  { name: "Estudante 3" },
+  {
+    $set: {
+      school: "Trybe",
+      bestScore: 8.8
+    }
+  },
+  { upsert: true }
+);
+```
+
+$set
+
+```tsx
+db.products.insertOne(
+  {
+    _id: 100,
+    sku: "abc123",
+    quantity: 250,
+    instock: true,
+    reorder: false,
+    details: { model: "14Q2", make: "xyz" },
+    tags: [ "apparel", "clothing" ],
+    ratings: [ { by: "John Doe", rating: 4 } ]
+  }
+);
+
+db.products.find().pretty();
+
+________
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $set: {
+      quantity: 500,
+      details: { model: "15Z9", make: "xyz" },
+      tags: ["coats", "outerwear", "clothing"]
+    }
+  }
+);
+
+db.products.find().pretty();
+```
+
+****Alterando campos em subdocumentos****
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  { $set: { "details.make": "zzz" } }
+);
+
+db.products.find().pretty();
+```
+
+****Alterando valores em *arrays***
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $set: {
+      "tags.1": "rain gear",
+      "ratings.0.rating": 2
+    }
+  }
+);
+
+db.products.find().pretty();
+```
+
+$mul - multiply
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $set: {
+      receitaMaxima: 1.75
+    }
+  }
+);
+
+db.products.findOne(
+  { _id: 100 },
+  { receitaMaxima: 1, quantity: 1}
+);
+
+____________________________
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $mul: {
+      receitaMaxima: 500
+    }
+  }
+);
+```
+
+****$inc - incrementa****
+
+O operador `$inc`quando utilizado com valores `positivos`**incrementa** o valor do campo especificado. Quando negativo, ele **decrementa** o valor do campo especificado.
+
+```tsx
+db.products.find(
+  { _id: 100 },
+  { quantity:1 }
+).pretty();
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $inc: {
+      quantity: 2
+    }
+  }
+);
+
+db.products.find(
+  { _id: 100 },
+  { quantity:1, receitaTotal: 1 }
+).pretty();
+
+______________
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $inc: {
+      receitaTotal: (-8) * 1.75,
+      quantity: -8
+    }
+  }
+);
+
+db.products.find(
+  { _id: 100 },
+  { quantity:1, receitaTotal: 1 }
+).pretty();
+```
+
+****Operadores $min e $max -** Os operadores `$min` e `$max` comparam um valor passado com o valor de um campo e, dependendo do resultado da comparação, atualizam o valor do campo.
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $min: { "quantity": 500 }
+  }
+);
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $max: { "quantity": 200 }
+  }
+);
+```
+
+****$currentDate() -**** Um exemplo de aplicação interessante do `$currentDate`
+ é manter a data de última alteração no documento.
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $currentDate: {
+      "ultimaAlteracao.data": true,
+    },
+    $set: {
+      "ultimaAlteracao.razao": "Abastecimento do estoque"
+    },
+    $max: { assentos: 1000 }
+  }
+);
+
+db.products.findOne(
+  { _id: 100 },
+  {
+    ultimaAlteracao: 1,
+    quantity: 1
+  }
+);
+```
+
+****$rename****
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $rename: {
+      "ultimaAlteracao": "ultimaModificacao"
+    }
+  }
+);
+
+db.products.findOne(
+  { _id: 100 },
+  {
+    ultimaModificacao: 1
+  }
+);
+
+_____ em subdocumentos
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $rename: {
+      "ultimaModificacao.razao": "ultimaModificacao.motivo"
+    }
+  }
+);
+```
+
+****$unset - remove campo****
+
+```tsx
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $unset: {
+      "campoSemUsar": ""
+    }
+  }
+);
+
+db.products.findOne(
+ { _id: 100 }
+);
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $unset: {
+      "ultimaModificacao.motivo": ""
+    }
+  }
+);
+
+db.products.updateOne(
+  { _id: 100 },
+  {
+    $unset: {
+      "ultimaModificacao": ""
+    }
+  }
+);
+```
+
+Challenges
+
+```
+use('class2')
+db.movies.insertMany([ { "title": "Batman", "category": [ "action", "adventure" ], "imdbRating": 7.6, "budget": 35 }, { "title": "Godzilla", "category": [ "action", "adventure", "sci-fi" ], "imdbRating": 6.6 }, { "title": "Home Alone", "category": [ "family", "comedy" ], "imdbRating": 7.4, } ])
+```
+
+**Exercício 1**: Altere o imdbRating para 7.7 no filme Batman. 
+
+db.movies.updateOne( { title: "Batman" }, { $set: { imdbRating: 7.7 } } )
+
+**Exercício 3**: Altere budget para 15 e imdbRating para 5.5 no filme Home Alone.
+
+db.movies.updateOne( { title: "Home Alone" }, { $set: { budget: 15, imdbRating: 5.5 } } )
+
+**Exercício 4**: Aumente em 2 o imdbRating do filme Batman.
+
+db.movies.updateOne( { title: "Batman" }, { $inc: { imdbRating: 2 } } )
+
+**Exercício 6**: Multiplique por 4 o imdbRating do filme Batman.
+
+db.movies.updateOne( { title: "Batman" }, { $mul: { imdbRating: 4 } } )
+
+**Exercício 7**: Renomeie o campo budget para estimatedBudget do filme Batman
+
+db.movies.updateOne( { title: "Batman" }, { $rename: { budget: "estimatedBudget" } })
+
+**Exercício 8**: Utilize o operador $min para alterar o budget para 5 do filme Home Alone
+
+db.movies.updateOne( { title: "Home Alone" }, { $min: { budget: 5 } } )
+
+**Exercício 9**: Utilize o operador $max para alterar o imdbRating para 8.6 do filme Godzilla. Além disso, altere a categoria "adventure" para "thriller" do filme Godzilla.
+
+db.movies.updateOne( { title: "Godzilla" }, { $max: { imdbRating: 8.6 }, $set: { "category.1": "thriller" } } )
+
+**Exercício 11**: Utilizando uma única operação, crie um campo chamado sequels e atribua a ele o valor 0 em todos os documentos.
+
+db.movies.updateMany( {}, { $set: { sequels: 0 } })
+
+**Exercício 13**: Para os filmes Batman ou Home Alone, atribua a imdbRating o valor 17 caso o valor de imdbRating seja menor que 17.
+
+db.movies.updateMany( { $or: [ { title: "Batman" }, { title: "Home Alone" }, ], }, { $max: { imdbRating: 17 }} )

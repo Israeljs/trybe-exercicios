@@ -1,0 +1,158 @@
+MongoDB - 3 link https://marbled-vein-bbf.notion.site/MongoDB-3-af2e3cc945a04181a0af76b71185ad31
+
+[https://www.mongodb.com/mern-stack](https://www.mongodb.com/mern-stack)
+
+
+```tsx
+use("produtos")
+db.getCollection('itens').find({})
+db.itens.find({})
+```
+
+****Operador $all****
+
+`$all` aplica um `AND`por isso todos os termos buscados devem estar no *array* ********
+
+```tsx
+db.itens.find(
+    {
+        tags: {
+            $all: [ "lemon", "orange" ]
+        }
+    },
+    {
+        _id: 1,
+        tags: 1
+    }
+).pretty()
+```
+
+****Operador $elemMatch  -** *pelo menos **um** elemento que satisfaça*
+
+```tsx
+db.itens.find(
+  {
+    quantidade: { $elemMatch: {  $gte: 70, $lte: 100 } }
+  },
+  {
+    _id: 1,
+    quantidade: 1
+  }
+).pretty();
+
+db.itens.find(
+  {
+    quantidade: { $elemMatch: {  $gte: 70, $lte: 100 } }
+  },
+  {
+    _id: 1,
+    quantidade: 1
+  }
+).count();
+```
+
+****Operador $size**** 
+
+O `$size`é um operador simples que filtra os *arrays* que tem `exatamente o número de elementos` especificado.
+
+```
+db.itens.find(
+    {
+        tags: { $size: 4 }
+    },
+    {
+        _id: 1,
+        tags: 1
+    }
+).pretty()
+```
+
+****Operador $expr**** 
+
+O operador `$expr`pode ser utilizado no `find`para comparar valores entre campos da mesma coleção. 
+
+```tsx
+db.itens.find(
+  {
+    $expr: {
+      $gt: [ "$valor_entrada_itens", "$valor_saida_itens"]
+    }
+  }
+).pretty();
+```
+
+****Operador $regex****
+
+```tsx
+
+db.itens.find(
+    {
+        categoria: {
+            $regex: /^Papel.*$/i
+        }
+    }
+).pretty();
+
+db.itens.find(
+    {
+        categoria: {
+            $regex: /^Papel.*$/i
+        }
+    }
+).count();
+```
+
+Para fixarmos, vamos fazer outro exemplo, contando a quantidade de produtos com valor de saída acima de 100 e que esteja na categoria Frutas. Para isso combinaremos um find simples com a `$regex:`
+
+```tsx
+db.itens.findOne(
+    {
+        valor_saida_itens: { $gt: 100 },
+        categoria: {
+            $regex: /Frutas/i
+        }
+    },
+    { categoria: 1 }
+);
+```
+
+Operador $mod
+
+```tsx
+db.itens.find(
+    {
+        valor_entrada_itens: {
+            $mod: [2, 0]
+        }
+    },
+    {
+        _id: 1,
+        valor_entrada_itens: 1
+    }
+);
+```
+
+**Busca textual - “ô trem top”**
+
+[https://www.mongodb.com/docs/manual/reference/operator/query/text/#match-operation-stemmed-words](https://www.mongodb.com/docs/manual/reference/operator/query/text/#match-operation-stemmed-words)
+
+```tsx
+use("produtos");
+
+db.itens.createIndex( { tags: "text" } )
+db.itens.find({ $text : { $search: 'red'}})
+
+Removendo um index
+db.itens.dropIndex("tags_text")
+
+Acrescentando campos e criando um novo index
+db.itens.createIndex( { tags: "text", categoria: "text" } )
+```
+
+**ElasticSearch ou MongoDB**
+
+[https://medium.com/data-hackers/comparando-elasticsearch-vs-mongodb-4b5932c613d9](https://medium.com/data-hackers/comparando-elasticsearch-vs-mongodb-4b5932c613d9)
+
+[https://www.youtube.com/watch?v=-sRcpGpd-0s](https://www.youtube.com/watch?v=-sRcpGpd-0s)
+
+***MERN project - Showww meee theee codeee***
