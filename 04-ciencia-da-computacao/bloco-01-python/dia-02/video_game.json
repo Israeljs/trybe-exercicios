@@ -1,0 +1,1290 @@
+[
+  {
+    "Title": "Super Mario 64 DS",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 85,
+      "Sales": 4.69,
+      "Used Price": 24.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 22.716666666666665,
+        "Leisure": 31.9,
+        "Median": 24.483333333333334,
+        "Polled": 57,
+        "Rushed": 14.3
+      },
+      "Completionists": {
+        "Average": 29.766666666666666,
+        "Leisure": 35.03333333333333,
+        "Median": 30.0,
+        "Polled": 20,
+        "Rushed": 22.016666666666666
+      },
+      "Main + Extras": {
+        "Average": 24.916666666666668,
+        "Leisure": 29.966666666666665,
+        "Median": 25.0,
+        "Polled": 16,
+        "Rushed": 18.333333333333332
+      },
+      "Main Story": {
+        "Average": 14.333333333333334,
+        "Leisure": 18.316666666666666,
+        "Median": 14.5,
+        "Polled": 21,
+        "Rushed": 9.7
+      }
+    }
+  },
+  {
+    "Title": "Lumines: Puzzle Fusion",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Strategy",
+      "Licensed?": true,
+      "Publishers": "Ubisoft",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 89,
+      "Sales": 0.56,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 10.1,
+        "Leisure": 11.016666666666667,
+        "Median": 10.0,
+        "Polled": 5,
+        "Rushed": 9.516666666666667
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 9.75,
+        "Leisure": 9.866666666666667,
+        "Median": 9.75,
+        "Polled": 2,
+        "Rushed": 9.616666666666667
+      },
+      "Main Story": {
+        "Average": 10.333333333333334,
+        "Leisure": 11.083333333333334,
+        "Median": 10.0,
+        "Polled": 3,
+        "Rushed": 9.583333333333334
+      }
+    }
+  },
+  {
+    "Title": "WarioWare Touched!",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 2,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Racing / Driving,Sports",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 81,
+      "Sales": 0.54,
+      "Used Price": 22.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 4.566666666666666,
+        "Leisure": 11.566666666666666,
+        "Median": 2.5,
+        "Polled": 57,
+        "Rushed": 2.2666666666666666
+      },
+      "Completionists": {
+        "Average": 10.0,
+        "Leisure": 14.1,
+        "Median": 7.25,
+        "Polled": 16,
+        "Rushed": 6.8
+      },
+      "Main + Extras": {
+        "Average": 3.85,
+        "Leisure": 5.666666666666667,
+        "Median": 3.3333333333333335,
+        "Polled": 11,
+        "Rushed": 2.783333333333333
+      },
+      "Main Story": {
+        "Average": 1.9166666666666665,
+        "Leisure": 2.9333333333333336,
+        "Median": 1.8333333333333335,
+        "Polled": 30,
+        "Rushed": 1.4333333333333333
+      }
+    }
+  },
+  {
+    "Title": "Hot Shots Golf: Open Tee",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Sports",
+      "Licensed?": true,
+      "Publishers": "Sony",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 81,
+      "Sales": 0.49,
+      "Used Price": 12.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      }
+    }
+  },
+  {
+    "Title": "Spider-Man 2",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "Activision",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 61,
+      "Sales": 0.45,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 13.25,
+        "Leisure": 48.38333333333333,
+        "Median": 10.0,
+        "Polled": 37,
+        "Rushed": 7.066666666666666
+      },
+      "Completionists": {
+        "Average": 72.56666666666666,
+        "Leisure": 78.86666666666666,
+        "Median": 72.56666666666666,
+        "Polled": 2,
+        "Rushed": 66.28333333333333
+      },
+      "Main + Extras": {
+        "Average": 12.766666666666667,
+        "Leisure": 17.316666666666666,
+        "Median": 12.5,
+        "Polled": 12,
+        "Rushed": 10.483333333333333
+      },
+      "Main Story": {
+        "Average": 8.35,
+        "Leisure": 11.083333333333334,
+        "Median": 8.0,
+        "Polled": 23,
+        "Rushed": 5.333333333333333
+      }
+    }
+  },
+  {
+    "Title": "The Urbz: Sims in the City",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Simulation",
+      "Licensed?": true,
+      "Publishers": "EA",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 67,
+      "Sales": 0.41,
+      "Used Price": 12.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "M",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 21.933333333333334,
+        "Leisure": 25.5,
+        "Median": 20.0,
+        "Polled": 7,
+        "Rushed": 16.733333333333334
+      },
+      "Completionists": {
+        "Average": 30.033333333333335,
+        "Leisure": 30.033333333333335,
+        "Median": 30.033333333333335,
+        "Polled": 2,
+        "Rushed": 30.033333333333335
+      },
+      "Main + Extras": {
+        "Average": 20.833333333333332,
+        "Leisure": 25.2,
+        "Median": 20.0,
+        "Polled": 3,
+        "Rushed": 16.45
+      },
+      "Main Story": {
+        "Average": 15.5,
+        "Leisure": 15.75,
+        "Median": 15.5,
+        "Polled": 2,
+        "Rushed": 15.25
+      }
+    }
+  },
+  {
+    "Title": "Ridge Racer",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Racing / Driving",
+      "Licensed?": true,
+      "Publishers": "Namco",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 88,
+      "Sales": 0.36,
+      "Used Price": 19.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 0.8166666666666667,
+        "Leisure": 1.05,
+        "Median": 0.8833333333333333,
+        "Polled": 6,
+        "Rushed": 0.5833333333333334
+      },
+      "Completionists": {
+        "Average": 1.25,
+        "Leisure": 1.25,
+        "Median": 1.25,
+        "Polled": 1,
+        "Rushed": 1.25
+      },
+      "Main + Extras": {
+        "Average": 0.8833333333333333,
+        "Leisure": 0.9333333333333333,
+        "Median": 0.8833333333333333,
+        "Polled": 2,
+        "Rushed": 0.8333333333333334
+      },
+      "Main Story": {
+        "Average": 0.6166666666666667,
+        "Leisure": 0.7833333333333333,
+        "Median": 0.5333333333333333,
+        "Polled": 3,
+        "Rushed": 0.45
+      }
+    }
+  },
+  {
+    "Title": "Metal Gear Ac!d",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Strategy",
+      "Licensed?": true,
+      "Publishers": "Konami",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 75,
+      "Sales": 0.34,
+      "Used Price": 17.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 25.383333333333333,
+        "Leisure": 51.65,
+        "Median": 21.266666666666666,
+        "Polled": 18,
+        "Rushed": 19.166666666666668
+      },
+      "Completionists": {
+        "Average": 80.0,
+        "Leisure": 80.0,
+        "Median": 80.0,
+        "Polled": 1,
+        "Rushed": 80.0
+      },
+      "Main + Extras": {
+        "Average": 24.833333333333332,
+        "Leisure": 27.483333333333334,
+        "Median": 25.1,
+        "Polled": 6,
+        "Rushed": 21.916666666666668
+      },
+      "Main Story": {
+        "Average": 20.7,
+        "Leisure": 23.6,
+        "Median": 20.783333333333335,
+        "Polled": 11,
+        "Rushed": 17.883333333333333
+      }
+    }
+  },
+  {
+    "Title": "Madden NFL 2005",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Sports",
+      "Licensed?": true,
+      "Publishers": "EA",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 68,
+      "Sales": 0.25,
+      "Used Price": 8.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "T",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      }
+    }
+  },
+  {
+    "Title": "Pokmon Dash",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Racing / Driving",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 46,
+      "Sales": 0.22,
+      "Used Price": 24.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "T",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 3.8333333333333335,
+        "Leisure": 7.25,
+        "Median": 1.1833333333333333,
+        "Polled": 4,
+        "Rushed": 1.75
+      },
+      "Completionists": {
+        "Average": 12.0,
+        "Leisure": 12.0,
+        "Median": 12.0,
+        "Polled": 1,
+        "Rushed": 12.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 1.1166666666666667,
+        "Leisure": 1.2,
+        "Median": 1.0833333333333333,
+        "Polled": 3,
+        "Rushed": 1.05
+      }
+    }
+  },
+  {
+    "Title": "Dynasty Warriors",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Adventure,Role-Playing (RPG)",
+      "Licensed?": true,
+      "Publishers": "",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 62,
+      "Sales": 0.2,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 8.883333333333333,
+        "Leisure": 18.05,
+        "Median": 2.0833333333333335,
+        "Polled": 4,
+        "Rushed": 3.1166666666666667
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 8.883333333333333,
+        "Leisure": 18.05,
+        "Median": 2.0833333333333335,
+        "Polled": 4,
+        "Rushed": 3.1166666666666667
+      }
+    }
+  },
+  {
+    "Title": "Feel the Magic XY/XX",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Adventure,Racing / Driving,Sports",
+      "Licensed?": true,
+      "Publishers": "Sega",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 75,
+      "Sales": 0.16,
+      "Used Price": 8.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "T",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 2.9,
+        "Leisure": 3.8,
+        "Median": 3.0,
+        "Polled": 9,
+        "Rushed": 2.3166666666666664
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 3.1,
+        "Leisure": 3.15,
+        "Median": 3.1,
+        "Polled": 2,
+        "Rushed": 3.05
+      },
+      "Main Story": {
+        "Average": 2.85,
+        "Leisure": 3.783333333333333,
+        "Median": 2.9833333333333334,
+        "Polled": 7,
+        "Rushed": 2.3
+      }
+    }
+  },
+  {
+    "Title": "Ridge Racer DS",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Racing / Driving",
+      "Licensed?": true,
+      "Publishers": "Namco",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 63,
+      "Sales": 0.15,
+      "Used Price": 9.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 2.2333333333333334,
+        "Leisure": 2.2333333333333334,
+        "Median": 2.2333333333333334,
+        "Polled": 1,
+        "Rushed": 2.2333333333333334
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 2.2333333333333334,
+        "Leisure": 2.2333333333333334,
+        "Median": 2.2333333333333334,
+        "Polled": 1,
+        "Rushed": 2.2333333333333334
+      }
+    }
+  },
+  {
+    "Title": "Darkstalkers Chronicle: The Chaos Tower",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "Capcom",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 74,
+      "Sales": 0.14,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 1.6333333333333333,
+        "Leisure": 2.4,
+        "Median": 2.0,
+        "Polled": 7,
+        "Rushed": 1.0666666666666667
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 1.6333333333333333,
+        "Leisure": 2.4,
+        "Median": 2.0,
+        "Polled": 7,
+        "Rushed": 1.0666666666666667
+      }
+    }
+  },
+  {
+    "Title": "Ape Escape Academy",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 4,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Sports",
+      "Licensed?": true,
+      "Publishers": "Sony",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 51,
+      "Sales": 0.13,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 1.8833333333333333,
+        "Leisure": 1.8833333333333333,
+        "Median": 1.8833333333333333,
+        "Polled": 1,
+        "Rushed": 1.8833333333333333
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 1.8833333333333333,
+        "Leisure": 1.8833333333333333,
+        "Median": 1.8833333333333333,
+        "Polled": 1,
+        "Rushed": 1.8833333333333333
+      }
+    }
+  },
+  {
+    "Title": "Polarium",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Strategy",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 73,
+      "Sales": 0.12,
+      "Used Price": 8.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 6.733333333333333,
+        "Leisure": 9.183333333333334,
+        "Median": 6.0,
+        "Polled": 5,
+        "Rushed": 5.266666666666667
+      },
+      "Completionists": {
+        "Average": 12.0,
+        "Leisure": 12.0,
+        "Median": 12.0,
+        "Polled": 1,
+        "Rushed": 12.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 5.416666666666667,
+        "Leisure": 5.783333333333333,
+        "Median": 5.75,
+        "Polled": 4,
+        "Rushed": 4.866666666666667
+      }
+    }
+  },
+  {
+    "Title": "Asphalt: Urban GT",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Racing / Driving,Simulation",
+      "Licensed?": true,
+      "Publishers": "Ubisoft",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 60,
+      "Sales": 0.11,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 12.4,
+        "Leisure": 13.7,
+        "Median": 12.4,
+        "Polled": 2,
+        "Rushed": 11.1
+      },
+      "Completionists": {
+        "Average": 9.816666666666666,
+        "Leisure": 9.816666666666666,
+        "Median": 9.816666666666666,
+        "Polled": 1,
+        "Rushed": 9.816666666666666
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 15.0,
+        "Leisure": 15.0,
+        "Median": 15.0,
+        "Polled": 1,
+        "Rushed": 15.0
+      }
+    }
+  },
+  {
+    "Title": "Zoo Keeper",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 74,
+      "Sales": 0.1,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "T",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 7.15,
+        "Leisure": 8.9,
+        "Median": 5.0,
+        "Polled": 5,
+        "Rushed": 5.033333333333333
+      },
+      "Completionists": {
+        "Average": 11.75,
+        "Leisure": 11.75,
+        "Median": 11.75,
+        "Polled": 1,
+        "Rushed": 11.75
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 6.0,
+        "Leisure": 7.75,
+        "Median": 5.0,
+        "Polled": 4,
+        "Rushed": 4.75
+      }
+    }
+  },
+  {
+    "Title": "Mr. DRILLER: Drill Spirits",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "Namco",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 72,
+      "Sales": 0.09,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "T",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 9.883333333333333,
+        "Leisure": 10.983333333333333,
+        "Median": 9.883333333333333,
+        "Polled": 2,
+        "Rushed": 8.766666666666667
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 9.883333333333333,
+        "Leisure": 10.983333333333333,
+        "Median": 9.883333333333333,
+        "Polled": 2,
+        "Rushed": 8.766666666666667
+      }
+    }
+  },
+  {
+    "Title": "Sprung",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Adventure",
+      "Licensed?": true,
+      "Publishers": "Ubisoft",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 48,
+      "Sales": 0.06,
+      "Used Price": 8.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 17.75,
+        "Leisure": 17.75,
+        "Median": 17.75,
+        "Polled": 1,
+        "Rushed": 17.75
+      },
+      "Completionists": {
+        "Average": 17.75,
+        "Leisure": 17.75,
+        "Median": 17.75,
+        "Polled": 1,
+        "Rushed": 17.75
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      }
+    }
+  },
+  {
+    "Title": "Armored Core: Formula Front - Extreme Battle",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Strategy",
+      "Licensed?": true,
+      "Publishers": "",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 66,
+      "Sales": 0.05,
+      "Used Price": 16.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      }
+    }
+  },
+  {
+    "Title": "Puyo Pop Fever",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Strategy",
+      "Licensed?": true,
+      "Publishers": "Sega",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 76,
+      "Sales": 0.04,
+      "Used Price": 19.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 2.5,
+        "Leisure": 3.1166666666666667,
+        "Median": 2.0,
+        "Polled": 3,
+        "Rushed": 1.8666666666666667
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 4.0,
+        "Leisure": 4.0,
+        "Median": 4.0,
+        "Polled": 1,
+        "Rushed": 4.0
+      },
+      "Main Story": {
+        "Average": 1.75,
+        "Leisure": 1.8666666666666667,
+        "Median": 1.75,
+        "Polled": 2,
+        "Rushed": 1.6166666666666667
+      }
+    }
+  },
+  {
+    "Title": "Mario Kart DS",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Racing / Driving",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 91,
+      "Sales": 9.99,
+      "Used Price": 29.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2005
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 10.416666666666666,
+        "Leisure": 22.366666666666667,
+        "Median": 9.083333333333334,
+        "Polled": 91,
+        "Rushed": 5.616666666666667
+      },
+      "Completionists": {
+        "Average": 16.383333333333333,
+        "Leisure": 25.333333333333332,
+        "Median": 15.0,
+        "Polled": 32,
+        "Rushed": 10.333333333333334
+      },
+      "Main + Extras": {
+        "Average": 10.716666666666667,
+        "Leisure": 15.166666666666666,
+        "Median": 10.0,
+        "Polled": 24,
+        "Rushed": 7.8
+      },
+      "Main Story": {
+        "Average": 4.783333333333333,
+        "Leisure": 7.366666666666666,
+        "Median": 4.5,
+        "Polled": 35,
+        "Rushed": 3.066666666666667
+      }
+    }
+  }
+]

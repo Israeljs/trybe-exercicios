@@ -29,3 +29,25 @@ b = [1, 2, 3]
 # 18 < temperatura < 25 # maneira mais pythonica
 #  idade <= 5 or idade >= 65
 
+a = 5.0
+print(type(a))
+
+# sequência(list, tuple, range);
+# conjuntos(set, frozenset);
+# mapeamento(dict);
+# sequências binárias(bytes, bytearray, memoryview).
+
+# listas - arrays
+
+chess_player = ['Magnus', 'Carlos', 'Fabiano']
+
+print(chess_player) # ['Magnus', 'Carlos', 'Fabiano']
+
+chess_player.append('Luiz')
+print(chess_player) # ['Magnus', 'Carlos', 'Fabiano', 'Luiz']
+chess_player.remove('Luiz')
+print(chess_player) # ['Magnus', 'Carlos', 'Fabiano']
+more_chess_player = ['André', 'Vanessa']
+more_chess_player.extend(chess_player)
+print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
+
