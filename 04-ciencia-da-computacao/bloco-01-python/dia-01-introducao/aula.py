@@ -50,6 +50,7 @@ more_chess_player.extend(chess_player)
 print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
 
 #tuplas é um conjunto com T coisas
+# variável composta apenas com valor
 champion = ('Magnus', 1)
 print(champion[0], champion[1])
 print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
@@ -62,3 +63,7 @@ chess_player_ranking.extend(
     ]  # type: ignore
 )
 print(chess_player_ranking)
+
+# dicionário - variável composta com chave e valor
+jogador = { "nome": "Israel", "cidade": "Paulista"}
+print(jogador['nome'])
