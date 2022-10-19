@@ -67,3 +67,9 @@ print(chess_player_ranking)
 # dicionário - variável composta com chave e valor
 jogador = { "nome": "Israel", "cidade": "Paulista"}
 print(jogador['nome'])
+
+# objeto
+user = {'Israel', 'Bebel'}
+squad = {'Natalia', 'natali', 'Bebel'}
+user.intersection(quad) # type: ignore
+
