@@ -40,9 +40,7 @@ print(type(a))
 # listas - arrays
 
 chess_player = ['Magnus', 'Carlos', 'Fabiano']
-
 print(chess_player) # ['Magnus', 'Carlos', 'Fabiano']
-
 chess_player.append('Luiz')
 print(chess_player) # ['Magnus', 'Carlos', 'Fabiano', 'Luiz']
 chess_player.remove('Luiz')
@@ -51,3 +49,16 @@ more_chess_player = ['André', 'Vanessa']
 more_chess_player.extend(chess_player)
 print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
 
+#tuplas é um conjunto com T coisas
+champion = ('Magnus', 1)
+print(champion[0], champion[1])
+print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
+chess_player_ranking = [champion]
+chess_player_ranking.append(('Vanessa', 2))  # type: ignore
+chess_player_ranking.extend(
+    [
+        (more_chess_player[0], 10),
+        (more_chess_player[3], 9)
+    ]  # type: ignore
+)
+print(chess_player_ranking)
