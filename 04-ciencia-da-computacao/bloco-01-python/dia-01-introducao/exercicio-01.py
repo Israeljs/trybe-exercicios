@@ -19,3 +19,5 @@ print(format(cost, ".2f"))
 trybe_course = ["Introdução", "Front-end", "Back-end"]
 #5
 trybe_course.append("Ciência da Computação")
+#6
+trybe_course[0] = "Fundamentos"
