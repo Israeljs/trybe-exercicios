@@ -68,8 +68,19 @@ print(chess_player_ranking)
 jogador = { "nome": "Israel", "cidade": "Paulista"}
 print(jogador['nome'])
 
-# objeto
+# set - conjunto
 user = {'Israel', 'Bebel'}
 squad = {'Natalia', 'natali', 'Bebel'}
-user.intersection(quad) # type: ignore
+all_user = {'Israel', 'Bebel', 'Natalia', 'natali'}
+print(user.intersection(squad))# {'bebel}
+print(all_user.difference(user)) # {'Natalia', 'natali'}
+# não tem acesso administrador
+standard_user = all_user.difference(user)
+# Acesso à todos
+user = user.union(standard_user)
 
+# lista - se armazena entidades relacionadas. Por exemplo os diferentes elementos de uma lista de supermercados pão, manteiga e leite
+# tupla - se armazena informações de uma mesma entidade por exemplo a manteiga é um laticínio, porcentagem de gordura se tem sal
+# dicionário - usamos quando se quer associar um valor a uma chave específica. Tanto pode ser usado no lugar de uma lista quanto de uma tupla.
+# * a tupla pode ser usada como chave do dicionário
+# conjunto - usamos quando se quer fazer operações típicas de conjuntos: União, intersecção. quando quisermos ter diferentes agrupamentos para comparar
