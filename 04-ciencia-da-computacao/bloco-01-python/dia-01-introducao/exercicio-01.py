@@ -21,3 +21,8 @@ trybe_course = ["Introdução", "Front-end", "Back-end"]
 trybe_course.append("Ciência da Computação")
 #6
 trybe_course[0] = "Fundamentos"
+# 7
+# var = set({'Natalia', 'Natali', 'Bebel'})
+var = set()
+var.add("Israel")
+print(var)

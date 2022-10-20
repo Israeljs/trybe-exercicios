@@ -62,6 +62,7 @@ print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
 
 #tuplas é um conjunto com T coisas
 # variável composta apenas com valor
+# São similares a listas, porém não podem ser modificados durante a execução do programa.
 champion = ('Magnus', 1)
 print(champion[0], champion[1])
 print(more_chess_player) # ['André', 'Vanessa', 'Magnus', 'Carlos', 'Fabiano']
@@ -80,6 +81,16 @@ jogador = { "nome": "Israel", "cidade": "Paulista"}
 print(jogador['nome'])
 
 # set - conjunto
+# é uma coleção de elementos únicos e não ordenados. Conjuntos 
+# implementam operações de união, intersecção e outras.
+permissions = {"member", "group"}  # elementos separados por vírgula, envolvidos por chaves
+permissions.add("root")  # adiciona um novo elemento ao conjunto
+permissions.add("member")  # como o elemento já existe, nenhum novo item é adicionado ao conjunto
+permissions.union({"user"})  # retorna um conjunto resultado da união
+permissions.intersection({"user", "member"})  # retorna um conjunto resultante da intersecção dos conjuntos
+permissions.difference({"user"})  # retorna a diferença entre os dois conjuntos
+
+
 user = {'Israel', 'Bebel'}
 squad = {'Natalia', 'natali', 'Bebel'}
 all_user = {'Israel', 'Bebel', 'Natalia', 'natali'}
