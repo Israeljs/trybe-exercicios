@@ -137,3 +137,24 @@ list(range(10, 0, -1))  # saída: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 # dicionário - usamos quando se quer associar um valor a uma chave específica. Tanto pode ser usado no lugar de uma lista quanto de uma tupla.
 # * a tupla pode ser usada como chave do dicionário
 # conjunto - usamos quando se quer fazer operações típicas de conjuntos: União, intersecção. quando quisermos ter diferentes agrupamentos para comparar
+
+#if elif else
+# Menor que R$2.000,00, pessoa desenvolvedora estagiária;
+# Entre R$2.000,00 e R$5.800,00, pessoa desenvolvedora júnior;
+# Entre R$5.800,00 e R$7.500,00, pessoa desenvolvedora pleno;
+# Entre R$7.500,00 e R$10.500,00, pessoa desenvolvedora sênior;
+# Qualquer valor acima do que já foi mencionado a pessoa desenvolvedora é considerada liderança.
+position = ""
+salary = 5000
+if salary <= 2000:
+    position = "estagiário"
+elif 2000 < salary <= 5800:
+    position = "júnior"
+elif 5800 < salary <= 7500:
+    position = "pleno"
+elif 7500 < salary <= 10500:
+    position = "senior"
+else:
+    position = "líder"
+print(position)
+

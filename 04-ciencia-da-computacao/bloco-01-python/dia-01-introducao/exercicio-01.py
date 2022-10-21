@@ -38,4 +38,10 @@ print(info)
 #9
 del info["origem"]
 print(info)
-
+#10
+my_list = [20, 20, 1, 2];
+count_elements = {
+    20: 2,
+    1: 1,
+    2: 2
+}
