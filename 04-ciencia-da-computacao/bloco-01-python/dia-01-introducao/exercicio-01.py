@@ -22,7 +22,20 @@ trybe_course.append("Ciência da Computação")
 #6
 trybe_course[0] = "Fundamentos"
 # 7
+# var = set(['Natalia', 'Natali', 'Bebel'])
 # var = set({'Natalia', 'Natali', 'Bebel'})
 var = set()
 var.add("Israel")
 print(var)
+info = {
+  "personagem": "Margarida",
+  "origem": "Pato Donald",
+  "nota": "Namorada do personagem principal nos quadrinhos do Pato Donald",
+}
+#8
+info["recorrente"] = "Sim"
+print(info)
+#9
+del info["origem"]
+print(info)
+
