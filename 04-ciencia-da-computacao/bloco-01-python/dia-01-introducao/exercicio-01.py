@@ -45,3 +45,15 @@ count_elements = {
     1: 1,
     2: 2
 }
+#12 calcule o fatorial de um número inteiro.
+number = 5
+counter = 1
+result = 1
+
+while counter <= number:
+    # result = result * counter
+    result *= counter
+    counter += 1
+
+print(result)
+
