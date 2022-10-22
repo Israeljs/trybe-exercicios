@@ -65,3 +65,7 @@ print(resultt)
 ratings = [6, 8, 5, 9, 10]
 new_ratings = [score*10 for score in ratings]
 print(new_ratings)
+#14
+for score in ratings:
+    if score % 3 == 0:
+      print(f'{score} é múltiplo de 3')
