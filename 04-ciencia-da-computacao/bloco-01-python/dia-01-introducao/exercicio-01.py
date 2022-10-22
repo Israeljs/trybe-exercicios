@@ -54,6 +54,14 @@ while counter <= number:
     # result = result * counter
     result *= counter
     counter += 1
-
 print(result)
-
+number = 5
+resultt = 1
+# Usamos number + 1 pro range ir até o number
+for factor in range(1, number+1):
+    resultt *= factor
+print(resultt)
+#13 
+ratings = [6, 8, 5, 9, 10]
+new_ratings = [score*10 for score in ratings]
+print(new_ratings)
