@@ -204,3 +204,15 @@ print(quadrados)
 # Saída
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
+# while
+# A Sequência de Fibonacci, muito presente em diversas formas na natureza,
+#  é uma sequência numérica começando por 0 e 1 e cada termo subsequente 
+#  corresponde à soma dos dois anteriores.
+
+n = 10
+last, next = 0, 1 # atribuição múltipla. Isto é, atribuição de vários valores
+# a múltiplas variáveis ao mesmo tempo. pode ser utilizado também para fazer a troca de valores entre variáveis: a, b = b, a.
+while last < n:
+    print(last)
+    last, next = next, last + next
+
