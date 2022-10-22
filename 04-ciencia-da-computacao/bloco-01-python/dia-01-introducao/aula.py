@@ -158,3 +158,49 @@ else:
     position = "líder"
 print(position)
 
+#for
+restaurants = [
+    {"name": "Restaurante A", "nota": 4.5},
+    {"name": "Restaurante B", "nota": 3.0},
+    {"name": "Restaurante C", "nota": 4.2},
+    {"name": "Restaurante D", "nota": 2.3},
+]
+# Quando um cliente pede a listagem de restaurantes, ele pode escolher filtrar o resultado de acordo com
+#  a nota. Essa filtragem pode ocorrer percorrendo a lista de restaurantes ou criando uma nova lista com 
+#  somente aqueles que atendem ao filtro, assim como mostra o exemplo abaixo:
+filtered_restaurants = []
+min_rating = 3.0
+for restaurant in restaurants:
+    if restaurant["nota"] > min_rating:
+        filtered_restaurants.append(restaurant)
+print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
+# Em alguns casos, podemos ainda querer percorrer uma sequência numérica,
+# e para isto iteramos sobre a estrutura de dados range.
+for index in range(5):
+    print(index)
+
+# Compreensão de lista - list comprehension
+# é declarada da mesma maneira que uma lista comum, porém no lugar dos elementos
+#  nós colocamos a iteração que vai gerar os elementos da nova lista.
+min_rating = 3.0
+filtered_restaurants = [restaurant
+                         for restaurant in restaurants
+                         if restaurant["nota"] > min_rating]
+print(filtered_restaurants)  # imprime a lista de restaurantes, sem o B e D
+
+names_list = ['Duda', 'Rafa', 'Cris', 'Yuri']
+new_names_list = [name for name in names_list if 'a' in name]
+# A compreensão de listas também funciona com listas de strings
+# Aqui o for percorre cada nome em "names_list", verifica se existe a letra "a" nele,
+# o adiciona à variável "name", e então gera nossa nova lista "new_names_list"
+print(new_names_list)
+
+# Saída
+['Duda', 'Rafa']
+# O exemplo a seguir usa uma compreensão de listas para criar uma lista com o quadrado dos números entre 1 e 10.
+quadrados = [x*x for x in range(11)]
+print(quadrados)
+
+# Saída
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
