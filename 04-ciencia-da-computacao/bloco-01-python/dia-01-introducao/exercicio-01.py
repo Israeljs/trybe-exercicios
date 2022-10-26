@@ -69,4 +69,3 @@ print(new_ratings)
 for score in ratings:
     if score % 3 == 0:
       print(f'{score} é múltiplo de 3')
-      # print(f'{score} é múltiplo de 3')
