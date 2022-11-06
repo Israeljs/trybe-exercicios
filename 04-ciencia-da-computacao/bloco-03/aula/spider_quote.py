@@ -48,4 +48,3 @@ if __name__ == "__main__":
     # quotes = extract_quotes(page_content)
     quotes = get_all_quotes()
     # print(quotes)
-    
