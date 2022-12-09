@@ -71,3 +71,24 @@ obj2 = {...obj1} // {cara: 'bob'}
 obj2.cara = 'mario'
 obj1 // {cara: 'bob'}
 obj2 // {cara: 'mario'}
+
+
+const fn = ( ) => ({ x: 1, y: 2, a: 3, b: 4 })
+const { x: a, y: b } = fn()
+
+console.log( a, b ) // 1 2
+
+function solution(n) {
+const k = n.toString().split('').map(Number).reduce(((acc, n)=> acc + n))
+console.log(k)
+}
+solution(32)
+
+function add(value) {
+  const valueAdded = [];
+  valueAdded.push(value)
+  valueAdded.sort()
+  return valueAdded
+}
+
+console.log(add([2, 3, 2]))
